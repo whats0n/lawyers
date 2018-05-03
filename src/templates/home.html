@@ -1,22 +1,26 @@
 ---
 title: Index page
-topic: {
-	id: '13427995',
-	meta: 'Last modified Apr 17 ',
-	title: 'Reichel-Cummings inc',
-	btn: 'Edit Corporation'
-}
-tabs: [
-	{ control: 'Company', id: 'company', file: 'company' },
-	{ control: 'Directors & Officers', id: 'directors-and-officers', file: 'directors-and-officers' },
-	{ control: 'Shares', id: 'shares', file: 'shares' },
-	{ control: 'Meetings', id: 'meetings', file: 'meetings' },
-	{ control: 'Finance', id: 'finance', file: 'finance' }
-]
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+
+	{# 
+		{% set topic = {
+			id: '13427995',
+			meta: 'Last modified Apr 17 ',
+			title: 'Reichel-Cummings inc',
+			btn: 'Edit Corporation'
+		} %}
+
+		{% set tabs = [
+			{ control: 'Company', id: 'company', file: 'company' },
+			{ control: 'Directors & Officers', id: 'directors-and-officers', file: 'directors-and-officers' },
+			{ control: 'Shares', id: 'shares', file: 'shares' },
+			{ control: 'Meetings', id: 'meetings', file: 'meetings' },
+			{ control: 'Finance', id: 'finance', file: 'finance' }
+		] %}
+	#}
 
 	{% include 'partials/components/_header.html' %}
 	{% include 'partials/components/_topic.html' %}
