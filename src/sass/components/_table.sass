@@ -1,17 +1,34 @@
 .table
-	padding-top: 80px
-	width: 700px
-	margin: 0 auto
 	font-size: 0
+	&__tr
+		position: relative
+		padding-right: 35px
+		border-bottom: 1px solid #f2f2f2
 	&__th,
 	&__td
 		display: inline-block
 		vertical-align: middle
+		padding: 0 5px
+		&[data-column="name"]
+			width: 48%
+		&[data-column="created"]
+			width: 25.2%
+		&[data-column="modified"]
+			width: 25.8%
 	&__td
-		padding: 19px 0
+		padding-top: 19px
+		padding-bottom: 19px
 		.title
-			+f(16px, 400, 1)
 			color: $blue
+			+f(16px, null, 1)
+		.meta
+			+f(14px, null, 1)
 	&__th
-		+f(12px, 400, 1)
+		padding-bottom: 3px
 		color: $cool-gray
+		+f(12px, null, 1)
+	&__btn
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)

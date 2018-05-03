@@ -1,0 +1,23 @@
+.btn-option
+	padding: 20px 6px 20px 20px
+	background-color: transparent
+	font-size: 0
+	span
+		position: relative
+		display: inline-block
+		background-color: $blue
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			background-color: $blue
+		&:before
+			left: -6px
+		&:after
+			right: -6px
+	span,
+	span:before,
+	span:after
+		width: 3px
+		height: 3px
