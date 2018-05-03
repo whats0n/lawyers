@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-close" viewBox="0 0 17 17">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-clock" viewBox="0 0 17 17">
+    <style>
+        .st0{fill:#a5afba}
+    </style>
+    <title>
+        clock
+    </title>
+    <g id="Corporations">
+        <g id="Corporation-Open" transform="translate(-854 -189)">
+            <g id="Group-3" transform="translate(855 188)">
+                <g id="clock" transform="translate(0 2)">
+                    <g id="Group-2">
+                        <path class="st0" d="M7.5 16C2.8 16-1 12.2-1 7.5S2.8-1 7.5-1 16 2.8 16 7.5 12.2 16 7.5 16zm0-16C3.4 0 0 3.4 0 7.5S3.4 15 7.5 15 15 11.6 15 7.5 11.6 0 7.5 0z" id="Oval"/>
+                        <path class="st0" d="M9.4 10.1c-.1 0-.3-.1-.4-.2L7.1 8C7 7.9 7 7.7 7 7.5V2.8c0-.3.2-.5.5-.5s.5.3.5.5v4.5l1.8 1.9c.2.2.2.5 0 .7-.2.2-.3.2-.4.2zM7.9 7.3z" id="Line"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</symbol><symbol id="icon-close" viewBox="0 0 17 17">
     <title>
         close
     </title>
