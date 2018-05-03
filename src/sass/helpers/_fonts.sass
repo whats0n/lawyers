@@ -1,0 +1,20 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight)
+	font-family: 'SFDisplay'
+	font-style: $style
+	font-weight: $weight
+
+@font-face
+	+fontdefault(normal, 400)
+	+fontpath('SFDisplay Regular', 'SFDisplay-Regular', SFDisplay-light)
+@font-face
+	+fontdefault(normal, 500)
+	+fontpath('SFDisplay Medium', 'SFDisplay-Medium', sfuidisplay-medium)
+@font-face
+	+fontdefault(normal, 600)
+	+fontpath('SFDisplay Semibold', 'SFDisplay-Semibold', sfuidisplay-semibold)
+@font-face
+	+fontdefault(normal, 700)
+	+fontpath('SFDisplay Bold', 'SFDisplay-Bold', sfuidisplay-bold)
