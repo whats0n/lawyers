@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.2,11.2 C9.409139,11.2 11.2,9.409139 11.2,7.2 C11.2,4.990861 9.409139,3.2 7.2,3.2 C4.990861,3.2 3.2,4.990861 3.2,7.2 C3.2,9.409139 4.990861,11.2 7.2,11.2 Z M11.6851077,10.5537369 L14.1656854,13.0343146 C14.4781049,13.346734 14.4781049,13.853266 14.1656854,14.1656854 C13.853266,14.4781049 13.346734,14.4781049 13.0343146,14.1656854 L10.5537369,11.6851077 C9.61887245,12.3852772 8.45786808,12.8 7.2,12.8 C4.1072054,12.8 1.6,10.2927946 1.6,7.2 C1.6,4.1072054 4.1072054,1.6 7.2,1.6 C10.2927946,1.6 12.8,4.1072054 12.8,7.2 C12.8,8.45786808 12.3852772,9.61887245 11.6851077,10.5537369 Z" id="path-1"></path>
+    </defs>
+    <g id="Corporations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Corporations-List" transform="translate(-698.000000, -22.000000)">
+            <g id="header" transform="translate(40.000000, 12.000000)">
+                <g id="Search-/-Blank" transform="translate(654.000000, 2.000000)">
+                    <g id="Icon-/-Search" transform="translate(3.000000, 7.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="Color-/-Grey" mask="url(#mask-2)" fill="#A5AFBA" fill-rule="evenodd">
+                            <rect id="Rectangle-Copy" x="0" y="0" width="16" height="16"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
