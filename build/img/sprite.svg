@@ -1,6 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-facebook" viewBox="0 0 10 19">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+        <path d="M7.2 11.2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm4.485-.646l2.48 2.48a.8.8 0 1 1-1.13 1.132l-2.481-2.48a5.6 5.6 0 1 1 1.131-1.131z" id="a"/>
+    </defs><symbol id="icon-search" viewBox="0 0 14 14">
     <title>
-        facebook
+        Icon / Search
     </title>
-    <path d="M9.766.157v2.946H8.014c-.64 0-1.071.134-1.295.402-.223.268-.335.67-.335 1.205v2.11h3.27l-.435 3.303H6.384v8.471H2.97v-8.47H.123V6.82H2.97V4.387c0-1.384.387-2.457 1.161-3.22C4.904.404 5.934.023 7.222.023c1.093 0 1.941.045 2.544.134z" fill-rule="evenodd"/>
+    
+    <g transform="translate(-1 -1)" fill-rule="evenodd">
+        <mask id="b">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill-rule="nonzero" xlink:href="#a"/>
+        <g mask="url(#b)">
+            <path d="M0 0h16v16H0z"/>
+        </g>
+    </g>
 </symbol></svg>
