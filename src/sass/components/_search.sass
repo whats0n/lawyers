@@ -1,11 +1,36 @@
 .search
-	position: relative
+	float: right
+	padding: 2px 20px 0 0
+	width: 100%
+	max-width: 280px
+	+sm
+		float: none
+		position: absolute
+		z-index: 5
+		top: 0
+		left: 0
+		right: 0
+		overflow: hidden
+		padding: 12px 60px 12px 20px
+		border-bottom: 1px solid #E7E7E7
+		width: auto
+		max-width: none
+		background: $white
+		transform: translate3d(0,-100%,0)
+		transition: transform 0.3s
+	&.is-open
+		+sm 
+			+gpu
+	&__form
+		position: relative
 	&__input
 		padding-left: 28px
 		border: 1px solid #E7E7E7
 		border-radius: 4px
 		width: 100%
 		height: 30px
+		color: $dark-gray
+		background: none
 		+f(15px, 400, normal)
 		&::placeholder
 			color: $cool-gray
@@ -22,3 +47,13 @@
 		vertical-align: middle
 		fill: $cool-gray
 		font-size: 14px
+	&__close
+		display: none
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 60px
+		+vertical
+		+sm 
+			display: block

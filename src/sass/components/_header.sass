@@ -4,42 +4,33 @@
 	left: 0
 	right: 0
 	padding: 12px 40px
+	min-width: 320px
+	+md
+		padding-left: 20px
+		padding-right: 20px
 	&__inner
 		+clr
 	&__search
+		display: none
 		float: right
-		margin: 2px 20px 0 0
-		width: 100%
-		max-width: 280px
-
-.logo
-	float: left
-	padding: 7px 0 6px
-	color: $dark-gray
-	+f(16px, 700, 1.1875)
-	&__in
-		color: inherit
-		transition: color 0.25s
-		+hover
-			color: $blue
-
-.profile
-	float: right
-	color: $blue
-	font-size: 0
-	white-space: nowrap
-	+hover
-		.profile__title
-			text-decoration: underline
-	&__img,
-	&__title
-		display: inline-block
-		vertical-align: middle
-	&__img
+		margin-right: 20px
+		border: 1px solid #E7E7E7
 		border-radius: 50%
 		width: 32px
 		height: 32px
-		+cover
-	&__title
-		padding: 8px 0 8px 14px
-		+f(14px, 400, 16px)			
+		background: none
+		+vertical
+		transition: border-color 0.3s, background 0.3s
+		+hover
+			border-color: $blue
+			background: $blue
+			.header__search-icon
+				fill: $white
+		+sm 
+			display: block
+		&-icon
+			display: inline-block
+			vertical-align: middle
+			fill: $cool-gray
+			font-size: 14px
+			transition: fill 0.3s

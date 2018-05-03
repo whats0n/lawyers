@@ -1,7 +1,31 @@
 <!-- begin topic -->
 <div class="topic">
 	<div class="inner">
-		
+		<div class="topic__main">
+			<div class="topic__heading">
+				{% if topic.id %}
+					<div class="topic__id">{{topic.id}}</div>
+				{% endif %}
+				<h2 class="title-lg topic__title">{{topic.title or 'Corporations'}}</h2>
+				{% if topic.meta %}
+					<div class="topic__meta">{{topic.meta}}</div>
+				{% endif %}
+			</div>
+			<div class="topic__btn">
+				<button class="btn">{{topic.btn or 'Create Corporation'}}</button>
+			</div>
+		</div>
+		{% if tabs %}
+			<div class="topic__menu">
+				<ul class="topic__list">
+					{% for item in tabs %}
+						<li class="topic__item">
+							<a data-href="{{item.id}}" class="topic__control {% if loop.first %}is-active{% endif %}">{{item.control}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
 	</div>
 </div>
 <!-- end topic -->
