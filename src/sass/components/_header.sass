@@ -19,12 +19,18 @@
 	+f(16px, 700, 1.1875)
 	&__in
 		color: inherit
+		transition: color 0.25s
+		+hover
+			color: $blue
 
 .profile
 	float: right
 	color: $blue
 	font-size: 0
 	white-space: nowrap
+	+hover
+		.profile__title
+			text-decoration: underline
 	&__img,
 	&__title
 		display: inline-block
@@ -36,4 +42,4 @@
 		+cover
 	&__title
 		padding: 8px 0 8px 14px
-		+f(14px, 400, 16px)
+		+f(14px, 400, 16px)			
