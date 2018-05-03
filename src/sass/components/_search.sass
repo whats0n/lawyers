@@ -1,10 +1,24 @@
 .search
 	position: relative
 	&__input
+		padding-left: 28px
 		border: 1px solid #E7E7E7
 		border-radius: 4px
 		width: 100%
 		height: 30px
 		+f(15px, 400, normal)
 		&::placeholder
-			// color: $cool-gray
+			color: $cool-gray
+	&__btn
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 22px
+		background: none
+		+vertical
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		fill: $cool-gray
+		font-size: 14px
