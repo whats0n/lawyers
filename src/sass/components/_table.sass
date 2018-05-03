@@ -1,34 +1,64 @@
+=col($name)
+	&[data-column="#{$name}"]
+		@content
 .table
 	font-size: 0
+	&__thead
+		+xs
+			display: none
 	&__tr
 		position: relative
 		padding-right: 35px
 		border-bottom: 1px solid #f2f2f2
+		+xs
+			padding: 10px 35px 10px 0
 	&__th,
 	&__td
 		display: inline-block
 		vertical-align: middle
 		padding: 0 5px
-		&[data-column="name"]
+		+xs
+			padding: 0
+		+col("name")
 			width: 48%
-		&[data-column="created"]
+			+xs
+				width: 100%
+		+col("created")
 			width: 25.2%
-		&[data-column="modified"]
+			+xs
+				width: 100%
+		+col("modified")
 			width: 25.8%
+			+xs
+				width: 100%
 	&__td
 		padding-top: 19px
 		padding-bottom: 19px
-		.title
-			color: $blue
-			+f(16px, null, 1)
-		.meta
-			+f(14px, null, 1)
+		+xs
+			padding-top: 6px
+			padding-bottom: 6px
+		&[data-title]
+			&:before
+				+xs
+					content: attr(data-title)
+					display: block
+					margin-bottom: 6px
+					color: $cool-gray
+					+f(12px, null, 1)
+	&__title
+		color: $blue
+		+f(16px, null, 1)
+	&__meta
+		+f(14px, null, 1)
 	&__th
 		padding-bottom: 3px
 		color: $cool-gray
 		+f(12px, null, 1)
 	&__btn
 		position: absolute
-		right: 0
+		right: -14px
 		top: 50%
 		transform: translateY(-50%)
+		+xs
+			top: 0
+			+gpu
