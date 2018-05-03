@@ -17,6 +17,10 @@
 		</div>
 		{% if tabs %}
 			<div class="topic__menu">
+				<a href="#" class="topic__history">
+					{{mixins.icon('clock', 'topic__history-icon')}}
+					<span class="topic__history-text">History</span>
+				</a>
 				<ul class="topic__list">
 					{% for item in tabs %}
 						<li class="topic__item">
