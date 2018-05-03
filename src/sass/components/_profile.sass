@@ -1,0 +1,22 @@
+.profile
+	float: right
+	color: $blue
+	font-size: 0
+	white-space: nowrap
+	+hover
+		.profile__title
+			text-decoration: underline
+	&__img,
+	&__title
+		display: inline-block
+		vertical-align: middle
+	&__img
+		border-radius: 50%
+		width: 32px
+		height: 32px
+		+cover
+	&__title
+		padding: 8px 0 8px 14px
+		+f(14px, 400, 16px)	
+		+sm 
+			display: none	

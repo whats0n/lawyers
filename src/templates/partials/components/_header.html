@@ -8,7 +8,13 @@
 			<div class="profile__img" style="background-image: url(img/profile.jpg);"></div>
 			<div class="profile__title">Gavin Davis</div>
 		</a>
-		<div class="search header__search">
+		<button class="header__search js-search-control">
+			{{mixins.icon('search', 'header__search-icon')}}
+		</button>
+		<div class="search js-search">
+			<button class="search__close js-search-control">
+				{{mixins.icon('close', 'search__icon')}}
+			</button>
 			<form action="/" class="search__form">
 				<button class="search__btn" type="submit">
 					{{mixins.icon('search', 'search__icon')}}
