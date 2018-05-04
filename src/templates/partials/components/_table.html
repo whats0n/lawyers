@@ -1,10 +1,15 @@
 <!-- begin table -->
 <div class="table">
+	{% set titles = {
+		name: 'Name',
+		created: 'Created',
+		modified: 'Last modified'
+	} %}
 	<div class="table__thead">
 		<div class="table__tr">
-			<div class="table__th" data-column="name">Name</div>
-			<div class="table__th" data-column="created">Created</div>
-			<div class="table__th" data-column="modified">Last modified</div>
+			<div class="table__th" data-column="name">{{titles.name}}</div>
+			<div class="table__th" data-column="created">{{titles.created}}</div>
+			<div class="table__th" data-column="modified">{{titles.modified}}</div>
 		</div>
 	</div>
 	<div class="table__tbody">
@@ -16,13 +21,13 @@
 			{ name: 'Dare LLC', meta: 'January 1, 2018', modified: 'March 28, 2018' }
 		] %}
 		<div class="table__tr">
-			<div class="table__td" data-column="name" data-title="Name">
+			<div class="table__td" data-column="name" data-title="{{titles.name}}">
 				<div class="table__title">{{item.name}}</div>
 			</div>
-			<div class="table__td" data-column="created" data-title="Created">
+			<div class="table__td" data-column="created" data-title="{{titles.created}}">
 				<div class="table__meta">{{item.meta}}</div>
 			</div>
-			<div class="table__td" data-column="modified" data-title="Last modified">
+			<div class="table__td" data-column="modified" data-title="{{titles.modified}}">
 				<div class="table__meta">{{item.modified}}</div>
 			</div>
 			<button class="table__btn btn-option"><span></span></button>
