@@ -1,0 +1,24 @@
+.checkbox
+	display: inline-block
+	position: relative
+	min-height: 20px
+	min-width: 20px
+	cursor: pointer
+	input[type=checkbox]:checked ~ .checkbox__icon .icon
+		opacity: 1
+		visibility: visible
+		transform: translateY(6px)
+	&__icon
+		display: inline-block
+		width: 20px
+		height: 20px
+		border: solid 1px #c9c9c9
+		border-radius: 4px
+		.icon
+			position: absolute
+			visibility: hidden
+			opacity: 0
+			left: 5px
+			top: 0
+			font-size: 8px
+			transition: opacity .3s linear, visibility .3s linear, transform .3s linear

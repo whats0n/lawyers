@@ -1,0 +1,35 @@
+{% import "partials/mixins/_checkbox.html" as checkbox %}
+{% macro call(props) %}
+	<!-- begin static-table -->
+	<div class="static-table">
+		<div class="static-table__thead">
+			<div class="static-table__tr">
+				{% for item in props.cols %}
+					<div class="static-table__th" data-column="{{item}}">{{props.titles[loop.index0]}}</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="static-table__tbody">
+			{% for string in props.strings %}
+				<div class="static-table__tr">
+					{{checkbox.call(props.checkboxOptions)}}
+					{% for item in props.cols %}
+						<div class="static-table__td" data-column="{{item}}" data-title="{{props.titles[loop.index0]}}">
+							<div class="static-table__value">{{string[loop.index0] | safe}}</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+			{% if props.footer %}
+				<div class="static-table__tr">
+					<div class="static-table__td" data-column="block">
+						<div class="static-table__result">{{props.footer}}</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+	<!-- end static-table -->
+
+
+{% endmacro %}

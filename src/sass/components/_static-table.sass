@@ -1,0 +1,79 @@
+=col($name)
+	&[data-column="#{$name}"]
+		@content
+.static-table
+	font-size: 0
+	&__thead
+		+sm
+			display: none
+	&__tbody
+		.static-table__tr
+			&:last-child
+				border-bottom: none
+	&__tr
+		border-bottom: solid 1px #f2f2f2
+		position: relative
+		+sm
+			padding: 10px 0
+	&__td,
+	&__th
+		display: inline-block
+		vertical-align: top
+		padding: 0 5px
+		+sm
+			padding: 0
+		&:first-child
+			padding-left: 0
+		+col("name")
+			width: 24%
+			+sm
+				width: 100%
+		+col("address")
+			width: 31%
+			+sm
+				width: 100%
+		+col("director")
+			width: 22.5%
+			+sm
+				width: 100%
+		+col("incorporator")
+			width: 22.5%
+			+sm
+				width: 100%
+		+col("block")
+			width: 100%
+	&__th
+		padding-bottom: 3px
+		+f(12px, null, null)
+		color: $cool-gray
+	&__td
+		padding-top: 12px
+		padding-bottom: 12px
+		+sm
+			padding-top: 6px
+			padding-bottom: 6px
+		&[data-title]
+			&:before
+				+sm
+					content: attr(data-title)
+					display: block
+					margin-bottom: 6px
+					color: $cool-gray
+					+f(12px, null, 1)
+	&__value
+		+f(14px, null, null)
+		p
+			margin-top: 4px
+	&__result
+		color: $cool-gray
+		+f(12px, null, 1)
+	&__checkbox
+		position: absolute
+		left: 0
+		top: 10px
+		display: none
+		+sm
+			left: auto
+			right: 0
+	.static-table__checkbox + .static-table__td
+		padding-left: 0

@@ -1,0 +1,19 @@
+{% import "partials/mixins/_static-table.html" as staticTable %}
+{% macro call(props) %}
+	<!-- begin section -->
+	<div class="section">
+		<div class="title-sm section__title">
+			<div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
+			<span class="title-name">{{props.title}}</span>
+			{% if props.btns %}
+				<div class="section__btns">
+					{% for item in props.btns %}
+						<button class="btn section__btn {{item.class}}">{{item.name}}</button>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+		{{staticTable.call(props.tableOption)}}
+	</div>
+	<!-- end section -->
+{% endmacro %}

@@ -1,0 +1,13 @@
+{% import "partials/mixins/_mixins.html" as mixins %}
+{% macro call(props) %}
+	{% if props %}
+	<!-- begin checkbox -->
+		<label class="checkbox {{props.class}}">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				{{mixins.icon('check')}}
+			</span>
+		</label>
+	<!-- end checkbox -->
+	{% endif %}
+{% endmacro %}

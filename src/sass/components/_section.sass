@@ -1,0 +1,54 @@
+.section
+	margin-bottom: 40px
+	+sm
+		margin-bottom: 20px
+	&.is-editing
+		.section
+			&__editing
+				display: inline-block
+			&__selection
+				display: none
+		.static-table
+			&__tr
+				padding-left: 35px
+				+sm
+					padding-left: 0
+					padding-right: 30px
+			&__checkbox
+				display: block
+	&.is-selected
+		.section
+			&__title
+				.title-name
+					display: none
+			&__selected
+				display: inline-block
+	&__title
+		position: relative
+		margin-bottom: 10px
+		min-height: 35px
+		+clr
+		.title-name
+			display: inline-block
+			margin-top: 7px
+			+xs
+				margin: 0 0 10px
+	&__selected
+		display: none
+		margin-top: 7px
+		+f(15px, null, 20px)
+		color: $cool-gray
+		+xs
+			margin: 0 0 10px
+	&__btns
+		float: right
+		margin: -5px
+		font-size: 0
+		+xs
+			float: none
+	&__editing
+		display: none
+	&__btn
+		// &:not(:last-child)
+		// 	margin-right: 10px
+		margin: 5px

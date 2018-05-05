@@ -24,7 +24,7 @@
 				<ul class="topic__list">
 					{% for item in tabs %}
 						<li class="topic__item">
-							<a data-href="{{item.id}}" class="topic__control {% if loop.first %}is-active{% endif %}">{{item.control}}</a>
+							<a data-href="{{item.id}}" class="topic__control {% if loop.index == activeTab %}is-active{% endif %}">{{item.control}}</a>
 						</li>
 					{% endfor %}
 				</ul>
