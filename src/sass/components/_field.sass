@@ -1,0 +1,46 @@
+.field
+	padding-top: 20px
+	position: relative
+	+xs
+		margin-bottom: 10px
+	&.is-focus
+		.field__label
+			+f(12px, null, null)
+			transform: translate(0)
+	&_indent
+		margin-bottom: 10px
+	&__label
+		position: absolute
+		z-index: 2
+		left: 0
+		top: 0
+		color: $cool-gray
+		+f(15px, null, 20px)
+		pointer-events: none
+		transform: translate(15px, 27px)
+		transition: transform .3s linear, font-size .3s linear
+		&_sm
+			+f(13px, null, 20px)
+			transform: translate(10px, 26px)
+	&__input,
+	&__textarea,
+	&__datepicker
+		width: 100%
+		display: block
+		border-radius: 4px
+		border: none
+		background: $white-smoke
+	&__textarea
+		+f(15px, 400, 20px)
+		resize: none
+		height: 100px
+		padding: 7px 15px
+		color: $charcoal-gray
+		+f(15px, 400, 20px)
+	&__input,
+	&__datepicker
+		height: 30px
+		padding: 3px 10px
+		+f(13px, 400, 20px)
+	&__datepicker
+		padding-right: 30px

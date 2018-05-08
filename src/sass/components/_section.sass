@@ -19,20 +19,19 @@
 	&.is-selected
 		.section
 			&__title
-				.title-name
-					display: none
+				display: none
 			&__selected
 				display: inline-block
-	&__title
+	&__header
 		position: relative
 		margin-bottom: 10px
 		min-height: 35px
 		+clr
-		.title-name
-			display: inline-block
-			margin-top: 7px
-			+xs
-				margin: 0 0 10px
+	&__title
+		display: inline-block
+		margin-top: 7px
+		+xs
+			margin: 0 0 10px
 	&__selected
 		display: none
 		margin-top: 7px
@@ -49,6 +48,4 @@
 	&__editing
 		display: none
 	&__btn
-		// &:not(:last-child)
-		// 	margin-right: 10px
 		margin: 5px

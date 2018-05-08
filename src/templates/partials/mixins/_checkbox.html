@@ -5,8 +5,11 @@
 		<label class="checkbox {{props.class}}">
 			<input type="checkbox">
 			<span class="checkbox__icon">
-				{{mixins.icon('check')}}
+				{{mixins.icon('check', 'checkbox__icon-in')}}
 			</span>
+			{% if props.label %}
+				<span class="checkbox__label">{{props.label}}</span>
+			{% endif %}
 		</label>
 	<!-- end checkbox -->
 	{% endif %}

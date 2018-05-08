@@ -1,0 +1,10 @@
+<!-- begin btn-wrapper -->
+<div class="btn-control {{controls.class}}">
+	{% if controls.prev %}
+		<button class="btn-control__prev">{{mixins.icon('angle-left')}}</button>
+	{% endif %}
+	{% if controls.next %}
+		<button class="btn-control__next">{{mixins.icon('angle-right')}}</button>
+	{% endif %}
+</div>
+<!-- end btn-wrapper -->

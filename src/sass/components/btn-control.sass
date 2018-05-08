@@ -1,0 +1,33 @@
+.btn-control
+	text-align: right
+	margin: 0 -10px
+	font-size: 0
+	+xs
+		padding-top: 10px
+	&_indent
+		padding-top: 30px
+	&__next,
+	&__prev
+		width: 30px
+		height: 30px
+		margin: 0 10px
+		border: 1px solid $blue
+		border-radius: 50%
+		background: transparent
+		transition: background .3s linear
+		+vertical
+		+hover
+			background: $blue
+			.icon
+				fill: $white
+		.icon
+			display: inline-block
+			vertical-align: middle
+			font-size: 13px
+			transition: fill .3s linear
+	&__next
+		.icon
+			margin-left: 2px
+	&__prev
+		.icon
+			margin-right: 2px

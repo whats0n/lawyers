@@ -3,3 +3,5 @@ ProjectTitle: lawyers
 PageList:
 - file: home.html
 - file: Directors&Officers.html
+- file: meetings.html
+- file: finance.html

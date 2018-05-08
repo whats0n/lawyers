@@ -1,0 +1,36 @@
+.select
+	height: 30px
+.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single
+		background: $white-smoke
+		border: none
+.select2-container .select2-selection--single
+	height: 30px
+.select2-container .select2-selection--single .select2-selection__rendered
+	padding-left: 10px
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	+f(13px, 400, 30px)
+	color: $dark-gray
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	top: 0
+	right: 0
+	bottom: 0
+	height: 100%
+.select2-dropdown
+	border: none
+	box-shadow: 0 2px 5px rgba(10,15,23,.1)
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	background: $blue
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	width: 30px
+.select2-container--classic .select2-selection--single .select2-selection__arrow b, .select2-container--default .select2-selection--single .select2-selection__arrow b
+	border: none
+	background-image: url('../../img/svgo/angle-down.svg')
+	margin-left: -5px
+	width: 10px
+	height: 5px
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center
+	transition: transform .2s linear
+.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+	transform: rotate(180deg)

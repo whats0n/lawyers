@@ -1,2 +1,23 @@
 {% macro call(props) %}
+	<div class="field {{props.classList}}">
+		<div class="field__label {{props.labelClass}}">{{props.label}}</div>
+		{% if props.textarea %}
+			<textarea class="field__textarea"></textarea>
+		{% endif %}
+		{% if props.input %}
+			<input type="text" class="field__input">
+		{% endif %}
+		{% if props.datapicker %}
+			<input type="text" class="field__datepicker js-datepicker">
+		{% endif %}
+		{% if props.select %}
+			<div class="field__select">
+				<select class="select js-select" style="width: 100%">
+					<option value="1">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+				</select>
+			</div>
+		{% endif %}
+	</div>
 {% endmacro %}

@@ -1,0 +1,22 @@
+<svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.9 7">
+    <style>
+        .st0{fill:#b9c1c8}
+    </style>
+    <title>
+        angle-right
+    </title>
+    <g id="Corporations">
+        <g id="Corporation-Delete-director" transform="translate(-910 -634)">
+            <g id="company_block" transform="translate(0 217)">
+                <g id="Group-3" transform="translate(898 408)">
+                    <g id="angle-right" transform="translate(12 9)">
+                        <g id="Group-2" transform="rotate(90 3 3.5)">
+                            <path class="st0" d="M6.3-.3c.2.2.2.5 0 .7l-6 6c-.2.2-.5.2-.7 0-.2-.2-.2-.5 0-.7l6-6c.2-.1.4-.1.5-.1s.2 0 .2.1z" id="Line"/>
+                            <path class="st0" d="M.3-6.3l6 6c.2.2.2.5 0 .7s-.5.2-.7 0l-6-6c-.2-.2-.2-.5 0-.7.2-.2.4-.2.5-.2s.3.1.2.2z" id="Line-2"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

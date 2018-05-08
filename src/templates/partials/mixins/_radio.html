@@ -1,0 +1,16 @@
+{% macro call(props) %}
+	{% if props %}
+		<!-- begin radio -->
+		{% for radio in props %}
+			<label class="radio {{radio.class}}">
+				<input type="radio" name="{{radio.name}}">
+				<span class="radio__icon">
+				</span>
+				{% if radio.label %}
+					<span class="radio__label">{{radio.label}}</span>
+				{% endif %}
+			</label>
+		{% endfor %}
+		<!-- end radio -->
+	{% endif %}
+{% endmacro %}

@@ -57,7 +57,10 @@ title: Directors & Officers
 					}
 				})}}
 
-				{% include 'partials/components/_btn-next.html' %}
+				{% set controls = {
+					next: true
+				} %}
+				{% include 'partials/components/_btn-control.html' %}
 		</div>
 	</div>
 

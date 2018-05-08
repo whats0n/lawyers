@@ -2,9 +2,9 @@
 {% macro call(props) %}
 	<!-- begin section -->
 	<div class="section">
-		<div class="title-sm section__title">
+		<div class="section__header">
 			<div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
-			<span class="title-name">{{props.title}}</span>
+			<div class="title-sm section__title">{{props.title}}</div>
 			{% if props.btns %}
 				<div class="section__btns">
 					{% for item in props.btns %}

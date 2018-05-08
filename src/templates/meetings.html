@@ -1,0 +1,135 @@
+---
+title: meetings
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% set topic = {
+		id: '13427995',
+		title: 'New corporation',
+		btn: 'Preview & Finalize'
+	} %}
+
+	{% set tabs = [
+		{ control: 'Company', id: 'company', file: 'company' },
+		{ control: 'Directors & Officers', id: 'directors-and-officers', file: 'directors-and-officers' },
+		{ control: 'Shares', id: 'shares', file: 'shares' },
+		{ control: 'Meetings', id: 'meetings', file: 'meetings' },
+		{ control: 'Finance', id: 'finance', file: 'finance' }
+	] %}
+
+	{% set activeTab = 4 %}
+
+	{% include 'partials/components/_header.html' %}
+	{% include 'partials/components/_topic.html' %}
+	<div class="main">
+		<div class="inner">
+			{% set partition = [
+				{
+					title: 'Director’s meetings',
+					gridClass: 'partition__grid',
+					grid: [
+						{
+							cols: 'grid__col_33 grid__col_xs-100',
+							fieldOptions: {
+								label: 'Notice',
+								textarea: true
+							}
+						},
+						{
+							cols: 'grid__col_33 grid__col_xs-100',
+							fieldOptions: {
+								label: 'Quorum',
+								textarea: true
+							}
+						},
+						{
+							cols: 'grid__col_33 grid__col_xs-100',
+							fieldOptions: {
+								label: 'Votes to govern',
+								textarea: true
+							}
+						}
+					],
+					checkboxOptions: {
+						class: 'partition__checkbox',
+						label: 'Casting vote'
+					}
+				},
+				{
+					title: 'Shareholders meeting',
+					gridClass: 'partition__grid',
+					grid: [
+						{
+							cols: 'grid__col_33 grid__col_xs-100',
+							fieldOptions: {
+								label: 'Notice',
+								textarea: true
+							}
+						},
+						{
+							cols: 'grid__col_33 grid__col_xs-100',
+							fieldOptions: {
+								label: 'Quorum',
+								textarea: true
+							}
+						},
+						{
+							cols: 'grid__col_33 grid__col_xs-100',
+							fieldOptions: {
+								label: 'Votes to govern',
+								textarea: true
+							}
+						}
+					],
+					checkboxOptions: {
+						class: 'partition__checkbox',
+						label: 'Casting vote'
+					}
+				},
+				{
+					gridClass: 'partition__grid',
+					grid: [
+						{
+							cols: 'grid__col_100',
+							fieldOptions: {
+								label: 'Execution of documents',
+								textarea: true
+							}
+						}
+					]
+				}
+			] %}
+			{% for item in partition %}
+				<!-- begin partition -->
+				<div class="partition">
+					{% if item.title %}
+						<div class="partition__header">
+							<div class="title-sm partition__title">{{item.title}}</div>
+							{{checkbox.call(item.checkboxOptions)}}
+						</div>
+					{% endif %}
+					<div class="grid {{item.gridClass}}">
+						<div class="grid__row">
+							{% for item in item.grid %}
+								<div class="grid__col {{item.cols}}">
+									{{field.call(item.fieldOptions)}}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<!-- end partition -->
+			{% endfor %}
+
+			{% set controls = {
+				prev: true,
+				next: true,
+				class: 'btn-control_indent'
+			} %}
+			{% include 'partials/components/_btn-control.html' %}
+		</div>
+	</div>
+
+{% endblock %}
