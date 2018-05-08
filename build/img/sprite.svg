@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-angle-left" viewBox="0 0 7 12.9">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+        <path d="M14 5c0-.552-.446-1-.995-1C13 4.552 12.556 5 12 5c-.552 0-1-.444-1-1H5c0 .552-.444 1-1 1-.552 0-1-.444-1-1-.554 0-1 .447-1 1v2h12V5zM2 9v5c0 .552.446 1 .995 1h10.01c.55 0 .995-.447.995-1V9H2zm14-4v9c0 1.656-1.34 3-2.995 3H2.995A2.998 2.998 0 0 1 0 14V5c0-1.656 1.34-3 2.995-3L3 1c0-.552.444-1 1-1 .552 0 1 .444 1 1v1h6V1c0-.552.444-1 1-1 .552 0 1 .444 1 1v1c1.66 0 3 1.344 3 3z" id="a"/>
+    </defs><symbol id="icon-angle-left" viewBox="0 0 7 12.9">
     <title>
         angle-right
     </title>
@@ -10,6 +12,12 @@
     </title>
     <path d="M6.5 7c-.1 0-.3 0-.4-.1l-6-6C-.1.7-.1.4.1.2s.5-.2.7 0l6 6c.2.2.2.5 0 .7 0 .1-.2.1-.3.1z"/>
     <path d="M.5 13c-.1 0-.3 0-.4-.1-.2-.2-.2-.5 0-.7l6-6c.2-.2.5-.2.7 0s.2.5 0 .7l-6 6c0 .1-.2.1-.3.1z"/>
+</symbol><symbol id="icon-calendar" viewBox="0 0 16 17">
+    <title>
+        calendar
+    </title>
+    
+    <use xlink:href="#a" fill-rule="evenodd"/>
 </symbol><symbol id="icon-check" viewBox="0 0 11 8">
     <title>
         Shape

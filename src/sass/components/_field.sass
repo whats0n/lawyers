@@ -5,8 +5,9 @@
 		margin-bottom: 10px
 	&.is-focus
 		.field__label
-			+f(12px, null, null)
-			transform: translate(0)
+			transform: translate(0) scale(0.8)
+			&_sm
+				transform: translate(0) scale(0.923)
 	&_indent
 		margin-bottom: 10px
 	&__label
@@ -18,7 +19,8 @@
 		+f(15px, null, 20px)
 		pointer-events: none
 		transform: translate(15px, 27px)
-		transition: transform .3s linear, font-size .3s linear
+		transform-origin: left top
+		transition: transform .3s, font-size .3s
 		&_sm
 			+f(13px, null, 20px)
 			transform: translate(10px, 26px)
@@ -44,3 +46,12 @@
 		+f(13px, 400, 20px)
 	&__datepicker
 		padding-right: 30px
+	&__in 
+		position: relative
+	&__calendar
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -0.55em
+		fill: #A5AFBA
+		font-size: 17px

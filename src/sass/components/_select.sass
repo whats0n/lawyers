@@ -17,7 +17,7 @@
 	height: 100%
 .select2-dropdown
 	border: none
-	box-shadow: 0 2px 5px rgba(10,15,23,.1)
+	box-shadow: 0 2px 5px rgba(10,15,23,.15)
 .select2-container--default .select2-results__option--highlighted[aria-selected]
 	background: $blue
 .select2-container--default .select2-selection--single .select2-selection__arrow
@@ -34,3 +34,6 @@
 	transition: transform .2s linear
 .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
 	transform: rotate(180deg)
+.select2-container--open .select2-dropdown--above
+	box-shadow: 0 -2px 5px rgba(10,15,23,.15)
+

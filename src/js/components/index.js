@@ -1,3 +1,2 @@
 import './search';
-import './datepicker';
-import './select2';
+import './field';

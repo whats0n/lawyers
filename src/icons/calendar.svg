@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="17px" viewBox="0 0 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14,5.00010618 C14,4.44751204 13.5536934,4 13.0049107,4 C13,4.55237094 12.5561352,5 12,5 C11.4477153,5 11,4.55628335 11,4.00019251 L5,4 C5,4.55237094 4.55613518,5 4,5 C3.44771525,5 3,4.55628335 3,4.00019251 C2.44572825,4 2,4.44694334 2,5.00010618 L2,7 L14,7 L14,5.00010618 Z M2,9 L2,13.9998938 C2,14.552488 2.44630663,15 2.99508929,15 L13.0049107,15 C13.5542717,15 14,14.5530567 14,13.9998938 L14,9 L2,9 Z M16,5.00010618 L16,13.9998938 C16,15.6564091 14.6600619,17 13.0049107,17 L2.99508929,17 C1.34052774,17 0,15.6558517 0,13.9998938 L0,5.00010618 C0,3.34359085 1.33993808,2 2.99508929,2 L3,0.999807492 C3,0.447629061 3.44386482,0 4,0 C4.55228475,0 5,0.443716645 5,0.999807492 L5,2 L11,2 L11,0.999807492 C11,0.447629061 11.4438648,0 12,0 C12.5522847,0 13,0.443716645 13,0.999807492 L13,2 C14.6594723,2 16,3.34414832 16,5.00010618 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Date-Picker-/-Filled" transform="translate(-194.000000, -25.000000)">
+            <g id="calendar" transform="translate(194.000000, 25.000000)">
+                <g id="Group">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#A5AFBA" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

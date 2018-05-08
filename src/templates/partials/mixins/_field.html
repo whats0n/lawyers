@@ -1,21 +1,27 @@
+{% import 'partials/mixins/_mixins.html' as mixins %}
+
 {% macro call(props) %}
-	<div class="field {{props.classList}}">
+	<div class="field {{props.classList}} js-field">
 		<div class="field__label {{props.labelClass}}">{{props.label}}</div>
 		{% if props.textarea %}
-			<textarea class="field__textarea"></textarea>
+			<textarea class="field__textarea js-field-input"></textarea>
 		{% endif %}
 		{% if props.input %}
-			<input type="text" class="field__input">
+			<input type="text" class="field__input js-field-input">
 		{% endif %}
 		{% if props.datapicker %}
-			<input type="text" class="field__datepicker js-datepicker">
+			<div class="field__in">
+				<input type="text" class="field__datepicker js-field-datepicker">
+				{{mixins.icon('calendar', 'field__calendar')}}
+			</div>
 		{% endif %}
 		{% if props.select %}
 			<div class="field__select">
-				<select class="select js-select" style="width: 100%">
+				<select class="select js-field-select" style="width: 100%">
+					<option></option>
 					<option value="1">1</option>
-					<option value="1">2</option>
-					<option value="1">3</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
 				</select>
 			</div>
 		{% endif %}
