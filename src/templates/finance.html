@@ -8,7 +8,8 @@ title: finance
 	{% set topic = {
 		id: '13427995',
 		title: 'New corporation',
-		btn: 'Preview & Finalize'
+		btn: 'Preview & Finalize',
+		btnClassList: 'btn_blue'
 	} %}
 
 	{% set tabs = [
@@ -19,7 +20,7 @@ title: finance
 		{ control: 'Finance', id: 'finance', file: 'finance' }
 	] %}
 
-	{% set activeTab = 4 %}
+	{% set activeTab = 5 %}
 
 	{% include 'partials/components/_header.html' %}
 	{% include 'partials/components/_topic.html' %}
@@ -260,7 +261,8 @@ title: finance
 			{% endfor %}
 
 			{% set controls = {
-				prev: true
+				prev: true,
+				class: 'btn-control_indent'
 			} %}
 			{% include 'partials/components/_btn-control.html' %}
 		</div>

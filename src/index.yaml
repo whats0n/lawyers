@@ -5,3 +5,7 @@ PageList:
 - file: Directors&Officers.html
 - file: meetings.html
 - file: finance.html
+- file: company.html
+- file: history.html
+- file: open.html
+- file: shares.html

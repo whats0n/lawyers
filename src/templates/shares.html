@@ -1,5 +1,5 @@
 ---
-title: Directors & Officers
+title: shares
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -7,7 +7,7 @@ title: Directors & Officers
 
 	{% set topic = {
 		id: '13427995',
-		title: 'Reichel-Cummings inc',
+		title: 'New corporation',
 		btn: 'Preview & Finalize',
 		btnClassList: 'btn_blue'
 	} %}
@@ -20,46 +20,38 @@ title: Directors & Officers
 		{ control: 'Finance', id: 'finance', file: 'finance' }
 	] %}
 
-	{% set activeTab = 2 %}
+	{% set activeTab = 3 %}
 
 	{% include 'partials/components/_header.html' %}
 	{% include 'partials/components/_topic.html' %}
 	<div class="main">
 		<div class="inner">
 				{{section.call({
-					title: 'Directors',
+					title: ['Share classes'],
 					btns: [
-						{name: 'cancel', class: 'btn_gray section__editing'},
-						{name: 'delete', class: 'btn_red section__editing'},
-						{name: 'select', class: 'btn_gray section__selection'},
 						{name: 'add'}
 					],
 					tableOption : {
-						cols: ['name', 'address', 'director', 'incorporator'],
-						titles: ['Name', 'Address', 'First director', 'Incorporator'],
-						strings: [
-							['Thomas Butler', 'Canada, Banff <p>0303 Wilderman Turnpike</p>', 'Lorem ipsum', 'Lorem ipsum'],
-							['Bernice Walters', 'Canada, Banff <p>4168 Ida Circle Suite 518</p>', 'Lorem ipsum', 'Lorem ipsum']
-						],
-						checkboxOptions: {
-							class: ['static-table__checkbox']
-						}
+						cols: ['share', 'series', 'voting', 'votes', 'price'],
+						titles: ['Share class', 'Series', 'Voting', 'Votes per share', 'Shares Authorized'],
+						footer: ['There are no officers yet']
 					}
 				})}}
 				{{section.call({
-					title: ['Officers'],
+					title: ['Share classes'],
 					btns: [
 						{name: 'add'}
 					],
 					tableOption : {
-						cols: ['name', 'address', 'director', 'incorporator'],
-						titles: ['Name', 'Address', 'Position'],
+						cols: ['share', 'series', 'voting', 'votes', 'price'],
+						titles: ['Name', 'Share class', 'Certificate', 'Shares', 'Price'],
 						footer: ['There are no officers yet']
 					}
 				})}}
 
 				{% set controls = {
-					next: true
+					next: true,
+					prev: true
 				} %}
 				{% include 'partials/components/_btn-control.html' %}
 		</div>

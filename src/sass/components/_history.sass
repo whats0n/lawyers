@@ -1,0 +1,43 @@
+.history
+	margin-bottom: 50px
+	+xs
+		margin-bottom: 30px
+	&__header
+		margin-bottom: 20px
+		+clr
+	&__title
+		display: inline-block
+		margin: 4px 0 10px
+		&_indent
+			margin: 10px 0 15px
+			+xss
+				display: block
+				margin: 0 0 10px
+	&__btn
+		&_right
+			float: right
+	&__field
+		width: 220px
+		margin-top: -20px
+		float: right
+		+xss
+			margin-top: 0
+			width: 100%
+	&__subtitle
+		margin-bottom: 20px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 40%
+			height: 1px
+			width: 100%
+			background: $white-smoke
+		span
+			overflow: hidden
+			position: relative
+			padding-right: 20px
+			color: $cool-gray
+			background: $white
+			+f(null, 700, 1)

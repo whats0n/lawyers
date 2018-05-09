@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Directors &amp; Officers</title>
+    <title>shares</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -45,7 +45,7 @@
           <div class="topic__main">
             <div class="topic__heading">
               <div class="topic__id">13427995</div>
-              <h2 class="title-lg topic__title">Reichel-Cummings inc</h2>
+              <h2 class="title-lg topic__title">New corporation</h2>
             </div>
             <div class="topic__btn"> <button class="btn btn_blue">Preview &amp; Finalize</button> </div>
           </div>
@@ -57,8 +57,8 @@
 				</a>
             <ul class="topic__list">
               <li class="topic__item"> <a data-href="company" class="topic__control ">Company</a> </li>
-              <li class="topic__item"> <a data-href="directors-and-officers" class="topic__control is-active">Directors &amp; Officers</a> </li>
-              <li class="topic__item"> <a data-href="shares" class="topic__control ">Shares</a> </li>
+              <li class="topic__item"> <a data-href="directors-and-officers" class="topic__control ">Directors &amp; Officers</a> </li>
+              <li class="topic__item"> <a data-href="shares" class="topic__control is-active">Shares</a> </li>
               <li class="topic__item"> <a data-href="meetings" class="topic__control ">Meetings</a> </li>
               <li class="topic__item"> <a data-href="finance" class="topic__control ">Finance</a> </li>
             </ul>
@@ -72,70 +72,24 @@
           <div class="section">
             <div class="section__header">
               <div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
-              <div class="title-sm section__title">Directors</div>
-              <div class="section__btns"> <button class="btn section__btn btn_gray section__editing">cancel</button> <button class="btn section__btn btn_red section__editing">delete</button> <button class="btn section__btn btn_gray section__selection">select</button> <button class="btn section__btn ">add</button>                </div>
+              <div class="title-sm section__title">Share classes</div>
+              <div class="section__btns"> <button class="btn section__btn ">add</button> </div>
             </div>
             <!-- begin static-table -->
             <div class="static-table">
               <div class="static-table__thead">
                 <div class="static-table__tr">
-                  <div class="static-table__th" data-column="name">Name</div>
-                  <div class="static-table__th" data-column="address">Address</div>
-                  <div class="static-table__th" data-column="director">First director</div>
-                  <div class="static-table__th" data-column="incorporator">Incorporator</div>
+                  <div class="static-table__th" data-column="share">Share class</div>
+                  <div class="static-table__th" data-column="series">Series</div>
+                  <div class="static-table__th" data-column="voting">Voting</div>
+                  <div class="static-table__th" data-column="votes">Votes per share</div>
+                  <div class="static-table__th" data-column="price">Shares Authorized</div>
                 </div>
               </div>
               <div class="static-table__tbody">
                 <div class="static-table__tr">
-                  <!-- begin checkbox --><label class="checkbox static-table__checkbox">
-			<input type="checkbox">
-			<span class="checkbox__icon">
-				
-<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-			</span>
-			
-		</label>
-                  <!-- end checkbox -->
-                  <div class="static-table__td" data-column="name" data-title="Name">
-                    <div class="static-table__value">Thomas Butler</div>
-                  </div>
-                  <div class="static-table__td" data-column="address" data-title="Address">
-                    <div class="static-table__value">Canada, Banff
-                      <p>0303 Wilderman Turnpike</p>
-                    </div>
-                  </div>
-                  <div class="static-table__td" data-column="director" data-title="First director">
-                    <div class="static-table__value">Lorem ipsum</div>
-                  </div>
-                  <div class="static-table__td" data-column="incorporator" data-title="Incorporator">
-                    <div class="static-table__value">Lorem ipsum</div>
-                  </div>
-                </div>
-                <div class="static-table__tr">
-                  <!-- begin checkbox --><label class="checkbox static-table__checkbox">
-			<input type="checkbox">
-			<span class="checkbox__icon">
-				
-<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-			</span>
-			
-		</label>
-                  <!-- end checkbox -->
-                  <div class="static-table__td" data-column="name" data-title="Name">
-                    <div class="static-table__value">Bernice Walters</div>
-                  </div>
-                  <div class="static-table__td" data-column="address" data-title="Address">
-                    <div class="static-table__value">Canada, Banff
-                      <p>4168 Ida Circle Suite 518</p>
-                    </div>
-                  </div>
-                  <div class="static-table__td" data-column="director" data-title="First director">
-                    <div class="static-table__value">Lorem ipsum</div>
-                  </div>
-                  <div class="static-table__td" data-column="incorporator" data-title="Incorporator">
-                    <div class="static-table__value">Lorem ipsum</div>
+                  <div class="static-table__td" data-column="block">
+                    <div class="static-table__result">There are no officers yet</div>
                   </div>
                 </div>
               </div>
@@ -147,17 +101,18 @@
           <div class="section">
             <div class="section__header">
               <div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
-              <div class="title-sm section__title">Officers</div>
+              <div class="title-sm section__title">Share classes</div>
               <div class="section__btns"> <button class="btn section__btn ">add</button> </div>
             </div>
             <!-- begin static-table -->
             <div class="static-table">
               <div class="static-table__thead">
                 <div class="static-table__tr">
-                  <div class="static-table__th" data-column="name">Name</div>
-                  <div class="static-table__th" data-column="address">Address</div>
-                  <div class="static-table__th" data-column="director">Position</div>
-                  <div class="static-table__th" data-column="incorporator"></div>
+                  <div class="static-table__th" data-column="share">Name</div>
+                  <div class="static-table__th" data-column="series">Share class</div>
+                  <div class="static-table__th" data-column="voting">Certificate</div>
+                  <div class="static-table__th" data-column="votes">Shares</div>
+                  <div class="static-table__th" data-column="price">Price</div>
                 </div>
               </div>
               <div class="static-table__tbody">
@@ -172,7 +127,9 @@
           </div>
           <!-- end section -->
           <!-- begin btn-wrapper -->
-          <div class="btn-control "> <button class="btn-control__next">
+          <div class="btn-control "> <button class="btn-control__prev">
+<svg class="icon icon-angle-left "><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
+</button> <button class="btn-control__next">
 <svg class="icon icon-angle-right "><use xlink:href="img/sprite.svg#icon-angle-right"></use></svg>
 </button> </div>
           <!-- end btn-wrapper -->

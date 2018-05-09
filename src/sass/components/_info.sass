@@ -1,0 +1,26 @@
+.info
+	margin-bottom: 25px
+	&:not(:last-child)
+		border-bottom: 1px solid #f2f2f2
+	&__item
+		padding-bottom: 15px
+	&__title
+		margin-bottom: 20px
+	&__subtitle
+		margin-bottom: 2px
+		color: $cool-gray
+		+f(13px, null, 1)
+	&__text
+		margin-bottom: 5px
+		+f(15px, null, 1.4)
+		&_sm
+			+f(13px, null, 21px)
+		&_gray
+			color: $cool-gray
+	&__name
+		margin-bottom: 5px
+		+f(15px, 500, 1.4)
+	&__link
+		color: $dark-gray
+		+hover
+			color: $blue

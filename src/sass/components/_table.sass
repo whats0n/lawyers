@@ -48,8 +48,12 @@
 					color: $cool-gray
 					+f(12px, null, 1)
 	&__title
-		color: $blue
-		+f(16px, null, 1)
+		a
+			text-decoration: none
+			color: $blue
+			+f(16px, null, 1)
+			+hover
+				text-decoration: underline
 	&__meta
 		+f(14px, null, 1)
 	&__th

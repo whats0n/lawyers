@@ -1,4 +1,10 @@
 .grid
+	&_inline
+		font-size: 0
+		.grid__col
+			float: none
+			display: inline-block
+			vertical-align: top
 	&__row
 		margin: 0 -8px
 		+clr
@@ -11,9 +17,17 @@
 			width: 50%
 		&_33
 			width: 33.33%
+		&_16
+			width: 16.66%
+		&_sm-25
+			+sm
+				width: 25%
 		&_xs-100
 			+xs
 				width: 100%
+		&_xss-33
+			+xss
+				width: 33.33%
 		&_xss-100
 			+xss
 				width: 100%

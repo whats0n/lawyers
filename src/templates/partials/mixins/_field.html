@@ -9,9 +9,12 @@
 		{% if props.input %}
 			<input type="text" class="field__input js-field-input">
 		{% endif %}
+		{% if props.text %}
+			<p class="field__description">{{props.text}}</p>
+		{% endif %}
 		{% if props.datapicker %}
 			<div class="field__in">
-				<input type="text" class="field__datepicker js-field-datepicker">
+				<input type="text" class="field__datepicker {{props.inputClassList}} js-field-datepicker">
 				{{mixins.icon('calendar', 'field__calendar')}}
 			</div>
 		{% endif %}

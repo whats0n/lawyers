@@ -24,6 +24,12 @@
 		&_sm
 			+f(13px, null, 20px)
 			transform: translate(10px, 26px)
+		&_lg
+			transform: translate(10px, 31px)
+	&__description
+		margin-top: 5px
+		color: $dark-gray
+		+f(12px, null, null)
 	&__input,
 	&__textarea,
 	&__datepicker
@@ -46,7 +52,12 @@
 		+f(13px, 400, 20px)
 	&__datepicker
 		padding-right: 30px
-	&__in 
+		&_lg
+			height: 39px
+			background: transparent
+			border: 1px solid #e7e7e7
+
+	&__in
 		position: relative
 	&__calendar
 		position: absolute
@@ -55,3 +66,4 @@
 		margin-top: -0.55em
 		fill: #A5AFBA
 		font-size: 17px
+		pointer-events: none

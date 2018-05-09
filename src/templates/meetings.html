@@ -28,6 +28,7 @@ title: meetings
 			{% set partition = [
 				{
 					title: 'Director’s meetings',
+					classList: 'partition_indent',
 					gridClass: 'partition__grid',
 					grid: [
 						{
@@ -103,7 +104,7 @@ title: meetings
 			] %}
 			{% for item in partition %}
 				<!-- begin partition -->
-				<div class="partition">
+				<div class="partition {{item.classList}}">
 					{% if item.title %}
 						<div class="partition__header">
 							<div class="title-sm partition__title">{{item.title}}</div>

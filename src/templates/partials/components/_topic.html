@@ -12,12 +12,12 @@
 				{% endif %}
 			</div>
 			<div class="topic__btn">
-				<button class="btn">{{topic.btn or 'Create Corporation'}}</button>
+				<button class="btn {{topic.btnClassList}}">{{topic.btn or 'Create Corporation'}}</button>
 			</div>
 		</div>
 		{% if tabs %}
 			<div class="topic__menu">
-				<a href="#" class="topic__history">
+				<a href="#" class="topic__history {{topic.historyClassList}}">
 					{{mixins.icon('clock', 'topic__history-icon')}}
 					<span class="topic__history-text">History</span>
 				</a>

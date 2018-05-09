@@ -6,18 +6,26 @@
 		tr
 			td,th
 				vertical-align: middle
-				
 
-.datepicker table tr td.active.active, 
-.datepicker table tr td.active.highlighted.active, 
-.datepicker table tr td.active.highlighted:active, 
-.datepicker table tr td.active.highlighted:hover, 
-.datepicker table tr td.active:active, 
+.datepicker.datepicker-inline td,
+.datepicker.datepicker-inline th,
+.datepicker.dropdown-menu td,
+.datepicker.dropdown-menu th
+	padding-top: 2px
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.highlighted:hover,
+.datepicker table tr td.active:active,
 .datepicker table tr td.active:hover
 	border-color: $blue
 	background: $blue
 
 .datepicker-dropdown.datepicker-orient-top
+	&:before,
+	&:after
+		display: none
+.datepicker-dropdown
 	&:before,
 	&:after
 		display: none

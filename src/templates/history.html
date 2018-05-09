@@ -1,0 +1,100 @@
+---
+title: history
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% set topic = {
+		id: '13427995',
+		title: 'New corporation',
+		btn: 'Preview & Finalize',
+		historyClassList: 'is-active'
+	} %}
+
+	{% set tabs = [
+		{ control: 'Company', id: 'company', file: 'company' },
+		{ control: 'Directors & Officers', id: 'directors-and-officers', file: 'directors-and-officers' },
+		{ control: 'Shares', id: 'shares', file: 'shares' },
+		{ control: 'Meetings', id: 'meetings', file: 'meetings' },
+		{ control: 'Finance', id: 'finance', file: 'finance' }
+	] %}
+
+	{% set activeTab = 0 %}
+
+	{% include 'partials/components/_header.html' %}
+	{% include 'partials/components/_topic.html' %}
+	<div class="main">
+		<div class="inner">
+			{% set historys = [
+				{
+					title: 'All changes saved',
+					btn: true,
+					grid: [{}]
+				},
+				{
+					title: 'Submitted',
+					titleClassList: 'history__title_indent',
+					fieldOptions: {
+						classList: 'history__field',
+						label: 'Select period',
+						labelClass: 'field__label_lg',
+						inputClassList: 'field__datepicker_lg',
+						datapicker: true
+					},
+					grid: [
+						{
+							subtitle: 'April 17'
+						},
+						{
+							subtitle: 'January 22'
+						},
+						{
+							subtitle: 'November 12, 2017'
+						}
+					]
+				}
+			] %}
+
+			{% for history in historys %}
+				<!-- begin history -->
+				<div class="history">
+					<div class="history__header">
+						<div class="title-sm history__title {{history.titleClassList}}">{{history.title}}</div>
+						{% if history.btn %}
+							<div class="history__btn history__btn_right">
+								<button class="btn btn_blue">SUBMIT</button>
+							</div>
+						{% endif %}
+						{% if history.fieldOptions %}
+							{{field.call(history.fieldOptions)}}
+						{% endif %}
+					</div>
+					<div class="grid grid_inline">
+						{% for row in history.grid  %}
+							<div class="grid__row">
+								{% if row.subtitle %}
+									<div class="grid__col grid__col_100">
+										<div class="history__subtitle"><span>{{row.subtitle}}</span></div>
+									</div>
+								{% endif %}
+								{% for col in range(0, 6) %}
+									<div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+										<div class="history-item">
+											<a href="#">
+												{{mixins.icon('file', 'history-item__icon')}}
+												<div class="history-item__label">{{'Document ' + loop.index}}</div>
+											</a>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!-- end history -->
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
