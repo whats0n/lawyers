@@ -1,5 +1,8 @@
 <!-- begin topic -->
 <div class="topic">
+	{% if topic.link %}
+		<a href="#" class="topic__link">{{mixins.icon('angle-left', 'topic__link-icon')}}{{topic.link}}</a>
+	{% endif %}
 	<div class="inner">
 		<div class="topic__main">
 			<div class="topic__heading">

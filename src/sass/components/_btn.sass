@@ -14,6 +14,16 @@
 	+hover
 		color: $white
 		background: $blue
+	&[disabled],
+	&:disabled
+		background: $silver
+		border-color: $silver
+		color: $white
+		cursor: not-allowed
+		+hover
+			background: $silver
+			border-color: $silver
+			color: $white
 	&_gray
 		border-color: $cool-gray
 		color: $cool-gray

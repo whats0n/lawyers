@@ -7,9 +7,11 @@ title: history
 
 	{% set topic = {
 		id: '13427995',
-		title: 'New corporation',
+		title: 'Reichel-Cummings inc',
 		btn: 'Preview & Finalize',
-		historyClassList: 'is-active'
+		link: 'Corporations',
+		historyClassList: 'is-active',
+		meta: 'Last modified Apr 17'
 	} %}
 
 	{% set tabs = [
@@ -80,10 +82,10 @@ title: history
 								{% endif %}
 								{% for col in range(0, 6) %}
 									<div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
-										<div class="history-item">
+										<div class="doc-item history__doc-item">
 											<a href="#">
-												{{mixins.icon('file', 'history-item__icon')}}
-												<div class="history-item__label">{{'Document ' + loop.index}}</div>
+												{{mixins.icon('file', 'doc-item__icon')}}
+												<div class="doc-item__label">{{'Document ' + loop.index}}</div>
 											</a>
 										</div>
 									</div>

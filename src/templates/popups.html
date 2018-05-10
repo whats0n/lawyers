@@ -1,0 +1,50 @@
+---
+title: popups
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% set topic = {
+		id: '13427995',
+		title: 'New corporation',
+		btn: 'Preview & Finalize',
+		btnClassList: 'btn_blue'
+	} %}
+
+	{% set tabs = [
+		{ control: 'Company', id: 'company', file: 'company' },
+		{ control: 'Directors & Officers', id: 'directors-and-officers', file: 'directors-and-officers' },
+		{ control: 'Shares', id: 'shares', file: 'shares' },
+		{ control: 'Meetings', id: 'meetings', file: 'meetings' },
+		{ control: 'Finance', id: 'finance', file: 'finance' }
+	] %}
+
+	{% set activeTab = 0 %}
+
+	{% include 'partials/components/_header.html' %}
+	{% include 'partials/components/_topic.html' %}
+	<div class="main">
+		<div class="inner">
+			{% set list = [
+					{data: 'newPreviewDisabled'},
+					{data: 'newPreview'},
+					{data: 'preview'},
+					{data: 'previewDisabled'},
+					{data: 'director'}
+				] %}
+
+			<ul>
+				{% for item in list %}
+					<li><a href="#" class="js-modal-control" data-target="{{item.data}}">{{'popup ' + loop.index}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% include 'partials/components/_newPreview&FinalizeDisabled.html' %}
+		{% include 'partials/components/_newPreview&Finalize.html' %}
+		{% include 'partials/components/_preview&Finalize.html' %}
+		{% include 'partials/components/_preview&FinalizeDisabled.html' %}
+		{% include 'partials/components/_addDirector.html' %}
+	</div>
+
+{% endblock %}

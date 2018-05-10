@@ -1,7 +1,11 @@
 .topic
 	padding: 107px 0 0
 	background: #f9fbff
+	+md
+		padding-top: 127px
 	+sm
+		padding-top: 100px
+	+r(700)
 		padding-top: 80px
 	&__main
 		padding-bottom: 15px
@@ -139,3 +143,26 @@
 			font-size: 17px
 		&-text
 			display: block
+	&__link
+		position: absolute
+		left: 40px
+		top: 64px
+		padding-left: 12px
+		+f(16px, null, 1)
+		color: $sky-blue
+		+hover
+			text-decoration: underline
+		+md
+			left: 20px
+		+r(700)
+			position: relative
+			display: inline-block
+			top: 0
+			left: 0
+			margin: 0 0 15px 20px
+	&__link-icon
+		position: absolute
+		left: 0
+		top: 2px
+		font-size: 10px
+		fill: currentColor

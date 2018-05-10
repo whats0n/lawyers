@@ -1,0 +1,164 @@
+{% set popup = {
+	title: 'Add director',
+	data: 'director',
+	partition: [
+		{
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xs-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				]
+			]
+		},
+		{
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xs-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Street name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xs-100',
+						innerCols: [
+							{
+								classList: 'grid__col_50',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Street number',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							},
+							{
+								classList: 'grid__col_50',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Suite',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							}
+						]
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'City',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Zip code',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Province',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Country',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					}
+				]
+			]
+		},
+		{
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'First director',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Incorporator',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				]
+			]
+		}
+	]
+} %}
+
+<!-- begin popup -->
+<div class="popup js-modal" data-modal="{{popup.data}}">
+	<div class="inner popup__inner popup__inner_sm">
+		<div class="popup__content js-modal-prevent">
+			<button class="popup__close js-modal-control" data-target="{{popup.data}}">{{mixins.icon('close', 'popup__icon')}}</button>
+			<div class="title-md popup__title popup__title_indent">{{popup.title}}</div>
+			{% for partition in popup.partition %}
+				<!-- begin partition -->
+				<div class="partition popup__partition">
+					<div class="grid">
+						{% for row in partition.grid %}
+							<div class="grid__row">
+								{% for col in row %}
+									<div class="grid__col {{col.classList}}">
+										{% if col.innerCols %}
+											<div class="grid__row">
+												{% for innerCol in col.innerCols %}
+													<div class="grid__col {{innerCol.classList}}">
+														{{field.call(innerCol.fieldOptions)}}
+													</div>
+												{% endfor %}
+											</div>
+										{% else %}
+											{{field.call(col.fieldOptions)}}
+										{% endif %}
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!-- end partition -->
+			{% endfor %}
+			<div class="popup__footer">
+				<a href="#" class="btn btn_blue popup__btn">ADD</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup -->
