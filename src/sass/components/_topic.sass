@@ -7,6 +7,12 @@
 		padding-top: 100px
 	+r(700)
 		padding-top: 80px
+	&.is-active
+		.topic
+			&__btn-default
+				display: none
+			&__btn-active
+				display: inline-block
 	&__main
 		padding-bottom: 15px
 		+clr
@@ -166,3 +172,5 @@
 		top: 2px
 		font-size: 10px
 		fill: currentColor
+	&__btn-active
+		display: none

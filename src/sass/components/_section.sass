@@ -2,12 +2,20 @@
 	margin-bottom: 40px
 	+sm
 		margin-bottom: 20px
+	&.is-active
+		.section
+			&__btns
+				display: block
 	&.is-editing
 		.section
 			&__editing
 				display: inline-block
 			&__selection
 				display: none
+			&__title
+				display: none
+			&__selected
+				display: inline-block
 		.static-table
 			&__tr
 				padding-left: 35px
@@ -16,12 +24,6 @@
 					padding-right: 30px
 			&__checkbox
 				display: block
-	&.is-selected
-		.section
-			&__title
-				display: none
-			&__selected
-				display: inline-block
 	&__header
 		position: relative
 		margin-bottom: 10px
@@ -40,6 +42,7 @@
 		+xs
 			margin: 0 0 10px
 	&__btns
+		display: none
 		float: right
 		margin: -5px
 		font-size: 0

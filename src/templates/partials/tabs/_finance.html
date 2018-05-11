@@ -1,0 +1,241 @@
+<div class="inner">
+
+	{% set partitions = [
+		{
+			title: 'Financial year end',
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Data',
+							labelClass: 'field__label_sm',
+							datapicker: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Description',
+							textarea: true
+						}
+					}
+				]
+			]
+		},
+		{
+			title: 'Account',
+			btn: 'Select from address book',
+			radioOptions: [
+				{
+					class: 'partition__radio',
+					label: 'Individual',
+					name: 'radio'
+				},
+				{
+					class: 'partition__radio',
+					label: 'Auditor',
+					name: 'radio'
+				}
+			],
+			checkboxOptions: {
+				class: 'partition__checkbox',
+				label: 'Auditor'
+			},
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						innerCols: [
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'First name',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							},
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Middle name',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							}
+						]
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Last name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Email',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Phone',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Street name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						innerCols: [
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Street number',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							},
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Suite',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							}
+						]
+					}
+				],
+				[
+					{
+						classList: 'grid__col_100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Additional information',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'City',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Zip code',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Province',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Country',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					}
+				]
+			]
+		}
+	] %}
+	{% for partition in partitions %}
+		<!-- begin partition -->
+		<div class="partition partition_sm">
+			<div class="partition__header">
+				<div class="title-sm partition__title">{{partition.title}}</div>
+				{{checkbox.call(partition.checkboxOptions)}}
+			</div>
+			{% if partition.btn or partition.radioOptions  %}
+				<div class="partition__middle">
+					{% if partition.radioOptions %}
+						<div class="partition__radios">
+							{{radio.call(partition.radioOptions)}}
+						</div>
+					{% endif %}
+					{% if partition.btn %}
+						<div class="partition__btn partition__btn_right">
+							<a href="#" class="btn">{{partition.btn}}</a>
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
+			<div class="grid">
+				{% for row in partition.grid %}
+					<div class="grid__row">
+						{% for col in row %}
+							<div class="grid__col {{col.classList}}">
+								{% if col.innerCols %}
+									<div class="grid__row">
+										{% for innerCol in col.innerCols %}
+											<div class="grid__col {{innerCol.classList}}">
+												{{field.call(innerCol.fieldOptions)}}
+											</div>
+										{% endfor %}
+									</div>
+								{% else %}
+									{{field.call(col.fieldOptions)}}
+								{% endif %}
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<!-- end partition -->
+	{% endfor %}
+
+	{% set controls = {
+		prev: true,
+		class: 'btn-control_indent'
+	} %}
+	{% include 'partials/components/_btn-control.html' %}
+</div>

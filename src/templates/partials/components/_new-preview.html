@@ -1,0 +1,56 @@
+{% set popup = {
+	title: 'Preview and finalize',
+	data: 'newPreview',
+	list: [
+		{name: 'Company'},
+		{name: 'Directors & Officers'},
+		{name: 'Shares'},
+		{name: 'Meetings'},
+		{name: 'Finance'}
+	]
+} %}
+
+<!-- begin popup -->
+<div class="popup js-modal" data-modal="{{popup.data}}">
+	<div class="inner popup__inner">
+		<div class="popup__content js-modal-prevent">
+			<button class="popup__close js-modal-control" data-target="{{popup.data}}">{{mixins.icon('close', 'popup__icon')}}</button>
+			<div class="title-md popup__title">{{popup.title}}</div>
+			<div class="popup__section">
+				<div class="popup__heading">
+					<div class="title-sm popup__subtitle">Changes</div>
+				</div>
+				<ul class="check-list popup__check-list">
+					{% for item in popup.list %}
+						<li class="check-list__item">{{item.name}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="popup__section" data-preview>
+				<div class="popup__heading">
+					<div class="title-sm popup__subtitle popup__subtitle_indent">Documents</div>
+					<button class="btn btn_blue popup__btn" data-preview-control>Build Draft Documents</button>
+				</div>
+				<p class="popup__text" data-preview-visible>Documents aren't built</p>
+				<div class="grid grid_inline" data-preview-section>
+					<div class="grid__row">
+						{% for col in range(0, 2) %}
+							<div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+								<div class="doc-item popup__doc-item">
+									<a href="#">
+										{{mixins.icon('file', 'doc-item__icon')}}
+										<div class="doc-item__label">{{'Document ' + loop.index}}</div>
+									</a>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="popup__footer" data-preview-section>
+					<a href="#" class="btn btn_blue popup__btn">Finalize</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup -->

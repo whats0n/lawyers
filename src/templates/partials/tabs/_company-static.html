@@ -1,0 +1,95 @@
+<div class="inner">
+	{% set informations = [
+		{
+			title: 'General information',
+			cols: [
+				{
+					subtitle: 'Proposed name',
+					text: 'Test proposed name'
+				},
+				{
+					subtitle: 'Corporation number',
+					text: '555666777'
+				},
+				{
+					subtitle: 'Effective filing data',
+					text: 'April 18, 2018',
+					textClassList: 'info__text_sm'
+				}
+			]
+		},
+		{
+			cols: [
+				{
+					title: 'Registered address',
+					name: 'Lelia Ramsey',
+					text: '2 Carlton street,  suite 1400 Torento, Ontario M5B 1J3 Canada'
+				},
+				{
+					title: 'Mailing address',
+					text: 'Same as registered',
+					textClassList: 'info__text_gray'
+				}
+			]
+		},
+		{
+			title: 'Business',
+			cols: [
+				{
+					subtitle: 'Municipality',
+					text: 'Mountain resort'
+				},
+				{
+					subtitle: 'Main business',
+					text: 'Services'
+				}
+			]
+		},
+		{
+			title: 'Main signatory',
+			cols: [
+				{
+					name: 'Lelia Ramsey'
+				},
+				{
+					text: '<a href="mailto:lelia_ram@gmail.com" class="info__link">lelia_ram@gmail.com</a>'
+				},
+				{
+					text: '<a href="tel:+16475554433" class="info__link">+1-647-555-44-33</a>'
+				}
+			]
+		}
+	] %}
+
+	{% for info in informations %}
+		<!-- begin info -->
+		<div class="info">
+			{% if info.title %}
+				<div class="title-sm info__title">{{info.title}}</div>
+			{% endif %}
+			<div class="grid">
+				<div class="grid__row">
+					{% for col in info.cols %}
+						<div class="grid__col grid__col_33 grid__col_xs-100">
+							<div class="info__item">
+								{% if col.title %}
+									<div class="title-sm info__title">{{col.title}}</div>
+								{% endif %}
+								{% if col.subtitle %}
+									<div class="info__subtitle">{{col.subtitle}}</div>
+								{% endif %}
+								{% if col.name %}
+									<div class="info__name">{{col.name}}</div>
+								{% endif %}
+								{% if col.text %}
+									<div class="info__text {{col.textClassList}}">{{col.text | safe}}</div>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<!-- end info -->
+	{% endfor %}
+</div>

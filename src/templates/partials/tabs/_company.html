@@ -1,0 +1,296 @@
+<div class="inner">
+
+	{% set partitions = [
+		{
+			title: 'General information',
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Proposed name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Corporation number',
+							text: 'Received from MGS upon filing',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Effective filing data',
+							labelClass: 'field__label_sm',
+							datapicker: true
+						}
+					}
+				]
+			]
+		},
+		{
+			title: 'Registered address',
+			titleClassList: 'partition__title_indent',
+			btnHeader: 'Select from address book',
+			grid: [
+				[
+					{
+						classList: 'grid__col_100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Attention / Care of',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Street name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						innerCols: [
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Street number',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							},
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Suite',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							}
+						]
+					}
+				],
+				[
+					{
+						classList: 'grid__col_100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Additional information',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'City',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Zip code',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Province',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Country',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					}
+				]
+			]
+		},
+		{
+			title: 'General information',
+			checkboxOptions: {
+				class: 'partition__checkbox',
+				label: 'Same as registered address'
+			}
+		},
+		{
+			title: 'Business',
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Municipality',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Main business',
+							labelClass: 'field__label_sm',
+							select: true
+						}
+					}
+				]
+			]
+		},
+		{
+			classList: 'row-item_last',
+			title: 'Main signatory',
+			titleClassList: 'partition__title_indent',
+			btnHeader: 'Select from address book',
+			grid: [
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						innerCols: [
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'First name',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							},
+							{
+								classList: 'grid__col_50 grid__col_xss-100',
+								fieldOptions: {
+									classList: 'field_indent',
+									label: 'Middle name',
+									labelClass: 'field__label_sm',
+									input: true
+								}
+							}
+						]
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Last name',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				],
+				[
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Email',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					},
+					{
+						classList: 'grid__col_50 grid__col_xss-100',
+						fieldOptions: {
+							classList: 'field_indent',
+							label: 'Phone',
+							labelClass: 'field__label_sm',
+							input: true
+						}
+					}
+				]
+			]
+		}
+	] %}
+	{% for partition in partitions %}
+		<div class="row-item {{partition.classList}}">
+			<!-- begin partition -->
+			<div class="partition partition_sm">
+				<div class="partition__header">
+					<div class="title-sm partition__title {{partition.titleClassList}}">{{partition.title}}</div>
+					{{checkbox.call(partition.checkboxOptions)}}
+					{% if partition.btnHeader %}
+						<div class="partition__btn partition__btn_right">
+							<a href="#" class="btn">{{partition.btnHeader}}</a>
+						</div>
+					{% endif %}
+				</div>
+				{% if partition.btn or partition.radioOptions  %}
+					<div class="partition__middle">
+						{% if partition.radioOptions %}
+							<div class="partition__radios">
+								{{radio.call(partition.radioOptions)}}
+							</div>
+						{% endif %}
+						{% if partition.btn %}
+							<div class="partition__btn partition__btn_right">
+								<a href="#" class="btn">{{partition.btn}}</a>
+							</div>
+						{% endif %}
+					</div>
+				{% endif %}
+				<div class="grid">
+					{% for row in partition.grid %}
+						<div class="grid__row">
+							{% for col in row %}
+								<div class="grid__col {{col.classList}}">
+									{% if col.innerCols %}
+										<div class="grid__row">
+											{% for innerCol in col.innerCols %}
+												<div class="grid__col {{innerCol.classList}}">
+													{{field.call(innerCol.fieldOptions)}}
+												</div>
+											{% endfor %}
+										</div>
+									{% else %}
+										{{field.call(col.fieldOptions)}}
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<!-- end partition -->
+		</div>
+	{% endfor %}
+
+	{% set controls = {
+		next: true
+	} %}
+	{% include 'partials/components/_btn-control.html' %}
+</div>

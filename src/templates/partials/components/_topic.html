@@ -1,7 +1,7 @@
 <!-- begin topic -->
-<div class="topic">
+<div class="topic {{topic.classList}}" {{topic.attrs | safe}}>
 	{% if topic.link %}
-		<a href="#" class="topic__link">{{mixins.icon('angle-left', 'topic__link-icon')}}{{topic.link}}</a>
+		<a href="home.html" class="topic__link">{{mixins.icon('angle-left', 'topic__link-icon')}}{{topic.link}}</a>
 	{% endif %}
 	<div class="inner">
 		<div class="topic__main">
@@ -15,19 +15,24 @@
 				{% endif %}
 			</div>
 			<div class="topic__btn">
-				<button class="btn {{topic.btnClassList}}">{{topic.btn or 'Create Corporation'}}</button>
+				{% if topic.btnLink %}
+					<a href="{{topic.btnLink}}" class="btn {{topic.btnClassList}} topic__btn-default" {{topic.btnAttrs | safe}}>{{topic.btn or 'Create Corporation'}}</a>
+				{% else %}
+					<button class="btn {{topic.btnClassList}} topic__btn-default" {{topic.btnAttrs | safe}}>{{topic.btn or 'Create Corporation'}}</button>
+				{% endif %}
+				<button class="btn btn_blue topic__btn-active js-modal-control" data-target="{{topic.previewModal or 'previewDisabled'}}">Preview & Finalize</button>
 			</div>
 		</div>
 		{% if tabs %}
 			<div class="topic__menu">
-				<a href="#" class="topic__history {{topic.historyClassList}}">
+				<a href="#" class="topic__history {{topic.historyClassList}}" data-tabs-shadow-control="history">
 					{{mixins.icon('clock', 'topic__history-icon')}}
 					<span class="topic__history-text">History</span>
 				</a>
 				<ul class="topic__list">
 					{% for item in tabs %}
 						<li class="topic__item">
-							<a data-href="{{item.id}}" class="topic__control {% if loop.index == activeTab %}is-active{% endif %}">{{item.control}}</a>
+							<a data-href="{{item.id}}" class="topic__control" data-tabs-control="{{item.id}}">{{item.control}}</a>
 						</li>
 					{% endfor %}
 				</ul>

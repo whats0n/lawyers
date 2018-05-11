@@ -19,10 +19,14 @@
   <body>
 
     <!-- BEGIN content -->
-    <div class="out">
+    <div class="out" data-tabs>
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
+    
+    {% include 'partials/components/_new-preview.html' %}
+    {% include 'partials/components/_preview.html' %}
+    {% include 'partials/components/_add-director.html' %}
 
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>

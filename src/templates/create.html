@@ -1,0 +1,41 @@
+---
+title: Create
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% set topic = {
+		classList: 'is-active',
+		id: '13427995',
+		title: 'New corporation',
+		link: 'Corporations',
+		btn: 'Edit corporation',
+		btnLink: 'create.html',
+		previewModal: 'newPreview'
+	} %}
+
+	{% set tabs = [
+		{ control: 'Company', id: 'company', file: 'company' },
+		{ control: 'Directors & Officers', id: 'corporation', file: 'corporation-active' },
+		{ control: 'Shares', id: 'shares', file: 'shares' },
+		{ control: 'Meetings', id: 'meetings', file: 'meetings' },
+		{ control: 'Finance', id: 'finance', file: 'finance' }
+	] %}
+
+	{% set activeTab = 1 %}
+
+	{% include 'partials/components/_header.html' %}
+	{% include 'partials/components/_topic.html' %}
+	{% for item in tabs %}
+		{% if item.file %}
+			<div class="main" data-tabs-content="{{item.id}}">
+				{% include 'partials/tabs/_' + item.file + '.html' %}
+			</div>
+		{% endif %}
+	{% endfor %}
+	<div class="main" data-tabs-content="history">
+		{% include 'partials/tabs/_history.html' %}
+	</div>
+
+{% endblock %}

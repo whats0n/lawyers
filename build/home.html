@@ -12,7 +12,7 @@
 
   <body>
     <!-- BEGIN content -->
-    <div class="out">
+    <div class="out" data-tabs>
       <!-- begin header -->
       <header class="header">
         <div class="header__inner">
@@ -40,13 +40,13 @@
       </header>
       <!-- end header -->
       <!-- begin topic -->
-      <div class="topic">
+      <div class="topic ">
         <div class="inner">
           <div class="topic__main">
             <div class="topic__heading">
               <h2 class="title-lg topic__title">Corporations</h2>
             </div>
-            <div class="topic__btn"> <button class="btn ">Create Corporation</button> </div>
+            <div class="topic__btn"> <a href="create.html" class="btn  topic__btn-default">Create Corporation</a> <button class="btn btn_blue topic__btn-active js-modal-control" data-target="previewDisabled">Preview & Finalize</button> </div>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
             <div class="table__tbody">
               <div class="table__tr">
                 <div class="table__td" data-column="name" data-title="Name">
-                  <div class="table__title"><a href="#">ABC inc</a></div>
+                  <div class="table__title"><a href="edit.html">ABC inc</a></div>
                 </div>
                 <div class="table__td" data-column="created" data-title="Created">
                   <div class="table__meta">January 1, 2018</div>
@@ -75,7 +75,7 @@
                 </div> <button class="table__btn btn-option"><span></span></button> </div>
               <div class="table__tr">
                 <div class="table__td" data-column="name" data-title="Name">
-                  <div class="table__title"><a href="#">Haag-Gerhold</a></div>
+                  <div class="table__title"><a href="edit.html">Haag-Gerhold</a></div>
                 </div>
                 <div class="table__td" data-column="created" data-title="Created">
                   <div class="table__meta">August 16,2016</div>
@@ -85,7 +85,7 @@
                 </div> <button class="table__btn btn-option"><span></span></button> </div>
               <div class="table__tr">
                 <div class="table__td" data-column="name" data-title="Name">
-                  <div class="table__title"><a href="#">Reichel-Cummings inc</a></div>
+                  <div class="table__title"><a href="edit.html">Reichel-Cummings inc</a></div>
                 </div>
                 <div class="table__td" data-column="created" data-title="Created">
                   <div class="table__meta">January 1, 2018</div>
@@ -95,7 +95,7 @@
                 </div> <button class="table__btn btn-option"><span></span></button> </div>
               <div class="table__tr">
                 <div class="table__td" data-column="name" data-title="Name">
-                  <div class="table__title"><a href="#">Greenholt, Kuhn and Larson</a></div>
+                  <div class="table__title"><a href="edit.html">Greenholt, Kuhn and Larson</a></div>
                 </div>
                 <div class="table__td" data-column="created" data-title="Created">
                   <div class="table__meta">January 1, 2018</div>
@@ -105,7 +105,7 @@
                 </div> <button class="table__btn btn-option"><span></span></button> </div>
               <div class="table__tr">
                 <div class="table__td" data-column="name" data-title="Name">
-                  <div class="table__title"><a href="#">Dare LLC</a></div>
+                  <div class="table__title"><a href="edit.html">Dare LLC</a></div>
                 </div>
                 <div class="table__td" data-column="created" data-title="Created">
                   <div class="table__meta">January 1, 2018</div>
@@ -120,6 +120,231 @@
       </div>
     </div>
     <!-- END content -->
+    <!-- begin popup -->
+    <div class="popup js-modal" data-modal="newPreview">
+      <div class="inner popup__inner">
+        <div class="popup__content js-modal-prevent"> <button class="popup__close js-modal-control" data-target="newPreview">
+<svg class="icon icon-close popup__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="title-md popup__title">Preview and finalize</div>
+          <div class="popup__section">
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle">Changes</div>
+            </div>
+            <ul class="check-list popup__check-list">
+              <li class="check-list__item">Company</li>
+              <li class="check-list__item">Directors &amp; Officers</li>
+              <li class="check-list__item">Shares</li>
+              <li class="check-list__item">Meetings</li>
+              <li class="check-list__item">Finance</li>
+            </ul>
+          </div>
+          <div class="popup__section" data-preview>
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle popup__subtitle_indent">Documents</div> <button class="btn btn_blue popup__btn" data-preview-control>Build Draft Documents</button> </div>
+            <p class="popup__text" data-preview-visible>Documents aren't built</p>
+            <div class="grid grid_inline" data-preview-section>
+              <div class="grid__row">
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__footer" data-preview-section> <a href="#" class="btn btn_blue popup__btn">Finalize</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup js-modal" data-modal="previewDisabled">
+      <div class="inner popup__inner">
+        <div class="popup__content js-modal-prevent"> <button class="popup__close js-modal-control" data-target="previewDisabled">
+<svg class="icon icon-close popup__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="title-md popup__title">Preview and finalize</div>
+          <div class="popup__section">
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle">Changes</div>
+            </div>
+            <ul class="director-list popup__director-list">
+              <li class="director-list__item">Removed Director: <span>Jevin Maltais</span></li>
+              <li class="director-list__item">Added Director: <span>Alice Smith</span></li>
+            </ul>
+          </div>
+          <div class="popup__section" data-preview>
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle popup__subtitle_indent">Documents</div> <button class="btn popup__btn" data-preview-control>Build Draft Documents</button> </div>
+            <p class="popup__text" data-preview-visible>Documents aren't built</p>
+            <div class="grid grid_inline" data-preview-section>
+              <div class="grid__row">
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 3</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 4</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 5</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 6</div>
+									</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__footer" data-preview-section> <a href="#" class="btn btn_blue popup__btn">Finalize</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup js-modal" data-modal="director">
+      <div class="inner popup__inner popup__inner_sm">
+        <div class="popup__content js-modal-prevent"> <button class="popup__close js-modal-control" data-target="director">
+<svg class="icon icon-close popup__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="title-md popup__title popup__title_indent">Add director</div>
+          <!-- begin partition -->
+          <div class="partition popup__partition">
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xs-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Name</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition popup__partition">
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xs-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Street name</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xs-100">
+                  <div class="grid__row">
+                    <div class="grid__col grid__col_50">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Street number</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                    <div class="grid__col grid__col_50">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Suite</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">City</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Zip code</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Province</div>
+                    <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                  </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Country</div>
+                    <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition popup__partition">
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">First director</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Incorporator</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <div class="popup__footer"> <a href="#" class="btn btn_blue popup__btn">ADD</a> </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->

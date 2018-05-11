@@ -5,4 +5,5 @@ export const HIDDEN = 'is-hidden';
 export const FOCUS = 'is-focus';
 
 export const DOC = $(document);
+export const WIN = $(window);
 export const BODY = $('body');

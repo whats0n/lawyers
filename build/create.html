@@ -1,0 +1,1177 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Create</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out" data-tabs>
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="logo"> <a href="#" class="logo__in">Name of the law company</a> </h1>
+          <a href="#" class="profile">
+            <div class="profile__img" style="background-image: url(img/profile.jpg);"></div>
+            <div class="profile__title">Gavin Davis</div>
+          </a> <button class="header__search js-search-control">
+			
+<svg class="icon icon-search header__search-icon"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+
+		</button>
+          <div class="search js-search"> <button class="search__close js-search-control">
+				
+<svg class="icon icon-close search__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+            <form action="/" class="search__form"> <button class="search__btn" type="submit">
+					
+<svg class="icon icon-search search__icon"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+
+				</button> <input type="text" class="search__input" placeholder="Search"> </form>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin topic -->
+      <div class="topic is-active"> <a href="home.html" class="topic__link">
+<svg class="icon icon-angle-left topic__link-icon"><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
+Corporations</a>
+        <div class="inner">
+          <div class="topic__main">
+            <div class="topic__heading">
+              <div class="topic__id">13427995</div>
+              <h2 class="title-lg topic__title">New corporation</h2>
+            </div>
+            <div class="topic__btn"> <a href="create.html" class="btn  topic__btn-default">Edit corporation</a> <button class="btn btn_blue topic__btn-active js-modal-control" data-target="newPreview">Preview & Finalize</button> </div>
+          </div>
+          <div class="topic__menu"> <a href="#" class="topic__history " data-tabs-shadow-control="history">
+					
+<svg class="icon icon-clock topic__history-icon"><use xlink:href="img/sprite.svg#icon-clock"></use></svg>
+
+					<span class="topic__history-text">History</span>
+				</a>
+            <ul class="topic__list">
+              <li class="topic__item"> <a data-href="company" class="topic__control" data-tabs-control="company">Company</a> </li>
+              <li class="topic__item"> <a data-href="corporation" class="topic__control" data-tabs-control="corporation">Directors &amp; Officers</a> </li>
+              <li class="topic__item"> <a data-href="shares" class="topic__control" data-tabs-control="shares">Shares</a> </li>
+              <li class="topic__item"> <a data-href="meetings" class="topic__control" data-tabs-control="meetings">Meetings</a> </li>
+              <li class="topic__item"> <a data-href="finance" class="topic__control" data-tabs-control="finance">Finance</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end topic -->
+      <div class="main" data-tabs-content="company">
+        <div class="inner">
+          <div class="row-item ">
+            <!-- begin partition -->
+            <div class="partition partition_sm">
+              <div class="partition__header">
+                <div class="title-sm partition__title ">General information</div>
+              </div>
+              <div class="grid">
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Proposed name</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Corporation number</div> <input type="text" class="field__input js-field-input">
+                      <p class="field__description">Received from MGS upon filing</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Effective filing data</div>
+                      <div class="field__in"> <input type="text" class="field__datepicker  js-field-datepicker"> <svg class="icon icon-calendar field__calendar"><use xlink:href="img/sprite.svg#icon-calendar"></use></svg> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end partition -->
+          </div>
+          <div class="row-item ">
+            <!-- begin partition -->
+            <div class="partition partition_sm">
+              <div class="partition__header">
+                <div class="title-sm partition__title partition__title_indent">Registered address</div>
+                <div class="partition__btn partition__btn_right"> <a href="#" class="btn">Select from address book</a> </div>
+              </div>
+              <div class="grid">
+                <div class="grid__row">
+                  <div class="grid__col grid__col_100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Attention / Care of</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Street name</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="grid__row">
+                      <div class="grid__col grid__col_50 grid__col_xss-100">
+                        <div class="field field_indent js-field">
+                          <div class="field__label field__label_sm">Street number</div> <input type="text" class="field__input js-field-input"> </div>
+                      </div>
+                      <div class="grid__col grid__col_50 grid__col_xss-100">
+                        <div class="field field_indent js-field">
+                          <div class="field__label field__label_sm">Suite</div> <input type="text" class="field__input js-field-input"> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Additional information</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">City</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Zip code</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Province</div>
+                      <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                    </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Country</div>
+                      <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end partition -->
+          </div>
+          <div class="row-item ">
+            <!-- begin partition -->
+            <div class="partition partition_sm">
+              <div class="partition__header">
+                <div class="title-sm partition__title ">General information</div>
+                <!-- begin checkbox --><label class="checkbox partition__checkbox">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				
+<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+			</span>
+			
+				<span class="checkbox__label">Same as registered address</span>
+			
+		</label>
+                <!-- end checkbox -->
+              </div>
+              <div class="grid"> </div>
+            </div>
+            <!-- end partition -->
+          </div>
+          <div class="row-item ">
+            <!-- begin partition -->
+            <div class="partition partition_sm">
+              <div class="partition__header">
+                <div class="title-sm partition__title ">Business</div>
+              </div>
+              <div class="grid">
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Municipality</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Main business</div>
+                      <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end partition -->
+          </div>
+          <div class="row-item row-item_last">
+            <!-- begin partition -->
+            <div class="partition partition_sm">
+              <div class="partition__header">
+                <div class="title-sm partition__title partition__title_indent">Main signatory</div>
+                <div class="partition__btn partition__btn_right"> <a href="#" class="btn">Select from address book</a> </div>
+              </div>
+              <div class="grid">
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="grid__row">
+                      <div class="grid__col grid__col_50 grid__col_xss-100">
+                        <div class="field field_indent js-field">
+                          <div class="field__label field__label_sm">First name</div> <input type="text" class="field__input js-field-input"> </div>
+                      </div>
+                      <div class="grid__col grid__col_50 grid__col_xss-100">
+                        <div class="field field_indent js-field">
+                          <div class="field__label field__label_sm">Middle name</div> <input type="text" class="field__input js-field-input"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Last name</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Email</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                  <div class="grid__col grid__col_50 grid__col_xss-100">
+                    <div class="field field_indent js-field">
+                      <div class="field__label field__label_sm">Phone</div> <input type="text" class="field__input js-field-input"> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end partition -->
+          </div>
+          <!-- begin btn-wrapper -->
+          <div class="btn-control "> <button class="btn-control__next">
+<svg class="icon icon-angle-right "><use xlink:href="img/sprite.svg#icon-angle-right"></use></svg>
+</button> </div>
+          <!-- end btn-wrapper -->
+        </div>
+      </div>
+      <div class="main" data-tabs-content="corporation">
+        <div class="inner">
+          <!-- begin section -->
+          <div class="section js-section is-active" data-toggle-section="corporation">
+            <div class="section__header">
+              <div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
+              <div class="title-sm section__title">Directors</div>
+              <div class="section__btns"> <button class="btn section__btn btn_gray section__editing js-section-cancel">cancel</button> <button class="btn section__btn btn_red section__editing">delete</button> <button class="btn section__btn btn_gray section__selection js-section-edit">select</button>                <button class="btn section__btn js-modal-control" data-target="director">add</button> </div>
+            </div>
+            <!-- begin static-table -->
+            <div class="static-table">
+              <div class="static-table__thead">
+                <div class="static-table__tr">
+                  <div class="static-table__th" data-column="name">Name</div>
+                  <div class="static-table__th" data-column="address">Address</div>
+                  <div class="static-table__th" data-column="director">First director</div>
+                  <div class="static-table__th" data-column="incorporator">Incorporator</div>
+                </div>
+              </div>
+              <div class="static-table__tbody">
+                <div class="static-table__tr">
+                  <!-- begin checkbox --><label class="checkbox static-table__checkbox">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				
+<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+			</span>
+			
+		</label>
+                  <!-- end checkbox -->
+                  <div class="static-table__td" data-column="name" data-title="Name">
+                    <div class="static-table__value">Thomas Butler</div>
+                  </div>
+                  <div class="static-table__td" data-column="address" data-title="Address">
+                    <div class="static-table__value">Canada, Banff
+                      <p>0303 Wilderman Turnpike</p>
+                    </div>
+                  </div>
+                  <div class="static-table__td" data-column="director" data-title="First director">
+                    <div class="static-table__value">Lorem ipsum</div>
+                  </div>
+                  <div class="static-table__td" data-column="incorporator" data-title="Incorporator">
+                    <div class="static-table__value">Lorem ipsum</div>
+                  </div>
+                </div>
+                <div class="static-table__tr">
+                  <!-- begin checkbox --><label class="checkbox static-table__checkbox">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				
+<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+			</span>
+			
+		</label>
+                  <!-- end checkbox -->
+                  <div class="static-table__td" data-column="name" data-title="Name">
+                    <div class="static-table__value">Bernice Walters</div>
+                  </div>
+                  <div class="static-table__td" data-column="address" data-title="Address">
+                    <div class="static-table__value">Canada, Banff
+                      <p>4168 Ida Circle Suite 518</p>
+                    </div>
+                  </div>
+                  <div class="static-table__td" data-column="director" data-title="First director">
+                    <div class="static-table__value">Lorem ipsum</div>
+                  </div>
+                  <div class="static-table__td" data-column="incorporator" data-title="Incorporator">
+                    <div class="static-table__value">Lorem ipsum</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end static-table -->
+          </div>
+          <!-- end section -->
+          <!-- begin section -->
+          <div class="section js-section is-active" data-toggle-section="corporation">
+            <div class="section__header">
+              <div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
+              <div class="title-sm section__title">Officers</div>
+              <div class="section__btns"> <button class="btn section__btn js-modal-control" data-target="director">add</button> </div>
+            </div>
+            <!-- begin static-table -->
+            <div class="static-table">
+              <div class="static-table__thead">
+                <div class="static-table__tr">
+                  <div class="static-table__th" data-column="name">Name</div>
+                  <div class="static-table__th" data-column="address">Address</div>
+                  <div class="static-table__th" data-column="director">Position</div>
+                  <div class="static-table__th" data-column="incorporator"></div>
+                </div>
+              </div>
+              <div class="static-table__tbody">
+                <div class="static-table__tr">
+                  <div class="static-table__td" data-column="block">
+                    <div class="static-table__result">There are no officers yet</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end static-table -->
+          </div>
+          <!-- end section -->
+          <!-- begin btn-wrapper -->
+          <div class="btn-control "> <button class="btn-control__next">
+<svg class="icon icon-angle-right "><use xlink:href="img/sprite.svg#icon-angle-right"></use></svg>
+</button> </div>
+          <!-- end btn-wrapper -->
+        </div>
+      </div>
+      <div class="main" data-tabs-content="shares">
+        <div class="inner">
+          <!-- begin section -->
+          <div class="section is-active">
+            <div class="section__header">
+              <div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
+              <div class="title-sm section__title">Share classes</div>
+              <div class="section__btns"> <button class="btn section__btn ">add</button> </div>
+            </div>
+            <!-- begin static-table -->
+            <div class="static-table">
+              <div class="static-table__thead">
+                <div class="static-table__tr">
+                  <div class="static-table__th" data-column="share">Share class</div>
+                  <div class="static-table__th" data-column="series">Series</div>
+                  <div class="static-table__th" data-column="voting">Voting</div>
+                  <div class="static-table__th" data-column="votes">Votes per share</div>
+                  <div class="static-table__th" data-column="price">Shares Authorized</div>
+                </div>
+              </div>
+              <div class="static-table__tbody">
+                <div class="static-table__tr">
+                  <div class="static-table__td" data-column="block">
+                    <div class="static-table__result">There are no officers yet</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end static-table -->
+          </div>
+          <!-- end section -->
+          <!-- begin section -->
+          <div class="section is-active">
+            <div class="section__header">
+              <div class="section__selected"><span>2</span> directors selected <button class="btn-link">Clear</button></div>
+              <div class="title-sm section__title">Share classes</div>
+              <div class="section__btns"> <button class="btn section__btn ">add</button> </div>
+            </div>
+            <!-- begin static-table -->
+            <div class="static-table">
+              <div class="static-table__thead">
+                <div class="static-table__tr">
+                  <div class="static-table__th" data-column="share">Name</div>
+                  <div class="static-table__th" data-column="series">Share class</div>
+                  <div class="static-table__th" data-column="voting">Certificate</div>
+                  <div class="static-table__th" data-column="votes">Shares</div>
+                  <div class="static-table__th" data-column="price">Price</div>
+                </div>
+              </div>
+              <div class="static-table__tbody">
+                <div class="static-table__tr">
+                  <div class="static-table__td" data-column="block">
+                    <div class="static-table__result">There are no officers yet</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end static-table -->
+          </div>
+          <!-- end section -->
+          <!-- begin btn-wrapper -->
+          <div class="btn-control "> <button class="btn-control__prev">
+<svg class="icon icon-angle-left "><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
+</button> <button class="btn-control__next">
+<svg class="icon icon-angle-right "><use xlink:href="img/sprite.svg#icon-angle-right"></use></svg>
+</button> </div>
+          <!-- end btn-wrapper -->
+        </div>
+      </div>
+      <div class="main" data-tabs-content="meetings">
+        <div class="inner">
+          <!-- begin partition -->
+          <div class="partition partition_indent">
+            <div class="partition__header">
+              <div class="title-sm partition__title">Director’s meetings</div>
+              <!-- begin checkbox --><label class="checkbox partition__checkbox">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				
+<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+			</span>
+			
+				<span class="checkbox__label">Casting vote</span>
+			
+		</label>
+              <!-- end checkbox -->
+            </div>
+            <div class="grid partition__grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_33 grid__col_xs-100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Notice</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+                <div class="grid__col grid__col_33 grid__col_xs-100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Quorum</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+                <div class="grid__col grid__col_33 grid__col_xs-100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Votes to govern</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition ">
+            <div class="partition__header">
+              <div class="title-sm partition__title">Shareholders meeting</div>
+              <!-- begin checkbox --><label class="checkbox partition__checkbox">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				
+<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+			</span>
+			
+				<span class="checkbox__label">Casting vote</span>
+			
+		</label>
+              <!-- end checkbox -->
+            </div>
+            <div class="grid partition__grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_33 grid__col_xs-100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Notice</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+                <div class="grid__col grid__col_33 grid__col_xs-100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Quorum</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+                <div class="grid__col grid__col_33 grid__col_xs-100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Votes to govern</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition ">
+            <div class="grid partition__grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_100">
+                  <div class="field  js-field">
+                    <div class="field__label ">Execution of documents</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin btn-wrapper -->
+          <div class="btn-control btn-control_indent"> <button class="btn-control__prev">
+<svg class="icon icon-angle-left "><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
+</button> <button class="btn-control__next">
+<svg class="icon icon-angle-right "><use xlink:href="img/sprite.svg#icon-angle-right"></use></svg>
+</button> </div>
+          <!-- end btn-wrapper -->
+        </div>
+      </div>
+      <div class="main" data-tabs-content="finance">
+        <div class="inner">
+          <!-- begin partition -->
+          <div class="partition partition_sm">
+            <div class="partition__header">
+              <div class="title-sm partition__title">Financial year end</div>
+            </div>
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Data</div>
+                    <div class="field__in"> <input type="text" class="field__datepicker  js-field-datepicker"> <svg class="icon icon-calendar field__calendar"><use xlink:href="img/sprite.svg#icon-calendar"></use></svg> </div>
+                  </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label ">Description</div> <textarea class="field__textarea js-field-input"></textarea> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition partition_sm">
+            <div class="partition__header">
+              <div class="title-sm partition__title">Account</div>
+              <!-- begin checkbox --><label class="checkbox partition__checkbox">
+			<input type="checkbox">
+			<span class="checkbox__icon">
+				
+<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+			</span>
+			
+				<span class="checkbox__label">Auditor</span>
+			
+		</label>
+              <!-- end checkbox -->
+            </div>
+            <div class="partition__middle">
+              <div class="partition__radios">
+                <!-- begin radio --><label class="radio partition__radio">
+				<input type="radio" name="radio">
+				<span class="radio__icon">
+				</span>
+				
+					<span class="radio__label">Individual</span>
+				
+			</label> <label class="radio partition__radio">
+				<input type="radio" name="radio">
+				<span class="radio__icon">
+				</span>
+				
+					<span class="radio__label">Auditor</span>
+				
+			</label>
+                <!-- end radio -->
+              </div>
+              <div class="partition__btn partition__btn_right"> <a href="#" class="btn">Select from address book</a> </div>
+            </div>
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="grid__row">
+                    <div class="grid__col grid__col_50 grid__col_xss-100">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">First name</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                    <div class="grid__col grid__col_50 grid__col_xss-100">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Middle name</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Last name</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Email</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Phone</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Street name</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="grid__row">
+                    <div class="grid__col grid__col_50 grid__col_xss-100">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Street number</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                    <div class="grid__col grid__col_50 grid__col_xss-100">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Suite</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Additional information</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">City</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Zip code</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Province</div>
+                    <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                  </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Country</div>
+                    <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin btn-wrapper -->
+          <div class="btn-control btn-control_indent"> <button class="btn-control__prev">
+<svg class="icon icon-angle-left "><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
+</button> </div>
+          <!-- end btn-wrapper -->
+        </div>
+      </div>
+      <div class="main" data-tabs-content="history">
+        <div class="inner">
+          <!-- begin history -->
+          <div class="history">
+            <div class="history__header">
+              <div class="title-sm history__title ">All changes saved</div>
+              <div class="history__btn history__btn_right"> <button class="btn btn_blue">SUBMIT</button> </div>
+            </div>
+            <div class="grid grid_inline">
+              <div class="grid__row">
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 3</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 4</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 5</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 6</div>
+									</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end history -->
+          <!-- begin history -->
+          <div class="history">
+            <div class="history__header">
+              <div class="title-sm history__title history__title_indent">Submitted</div>
+              <div class="field history__field js-field">
+                <div class="field__label field__label_lg">Select period</div>
+                <div class="field__in"> <input type="text" class="field__datepicker field__datepicker_lg js-field-datepicker"> <svg class="icon icon-calendar field__calendar"><use xlink:href="img/sprite.svg#icon-calendar"></use></svg> </div>
+              </div>
+            </div>
+            <div class="grid grid_inline">
+              <div class="grid__row">
+                <div class="grid__col grid__col_100">
+                  <div class="history__subtitle"><span>April 17</span></div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 3</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 4</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 5</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 6</div>
+									</a> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_100">
+                  <div class="history__subtitle"><span>January 22</span></div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 3</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 4</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 5</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 6</div>
+									</a> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_100">
+                  <div class="history__subtitle"><span>November 12, 2017</span></div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 3</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 4</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 5</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-33">
+                  <div class="doc-item history__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 6</div>
+									</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end history -->
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- begin popup -->
+    <div class="popup js-modal" data-modal="newPreview">
+      <div class="inner popup__inner">
+        <div class="popup__content js-modal-prevent"> <button class="popup__close js-modal-control" data-target="newPreview">
+<svg class="icon icon-close popup__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="title-md popup__title">Preview and finalize</div>
+          <div class="popup__section">
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle">Changes</div>
+            </div>
+            <ul class="check-list popup__check-list">
+              <li class="check-list__item">Company</li>
+              <li class="check-list__item">Directors &amp; Officers</li>
+              <li class="check-list__item">Shares</li>
+              <li class="check-list__item">Meetings</li>
+              <li class="check-list__item">Finance</li>
+            </ul>
+          </div>
+          <div class="popup__section" data-preview>
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle popup__subtitle_indent">Documents</div> <button class="btn btn_blue popup__btn" data-preview-control>Build Draft Documents</button> </div>
+            <p class="popup__text" data-preview-visible>Documents aren't built</p>
+            <div class="grid grid_inline" data-preview-section>
+              <div class="grid__row">
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__footer" data-preview-section> <a href="#" class="btn btn_blue popup__btn">Finalize</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup js-modal" data-modal="previewDisabled">
+      <div class="inner popup__inner">
+        <div class="popup__content js-modal-prevent"> <button class="popup__close js-modal-control" data-target="previewDisabled">
+<svg class="icon icon-close popup__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="title-md popup__title">Preview and finalize</div>
+          <div class="popup__section">
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle">Changes</div>
+            </div>
+            <ul class="director-list popup__director-list">
+              <li class="director-list__item">Removed Director: <span>Jevin Maltais</span></li>
+              <li class="director-list__item">Added Director: <span>Alice Smith</span></li>
+            </ul>
+          </div>
+          <div class="popup__section" data-preview>
+            <div class="popup__heading">
+              <div class="title-sm popup__subtitle popup__subtitle_indent">Documents</div> <button class="btn popup__btn" data-preview-control>Build Draft Documents</button> </div>
+            <p class="popup__text" data-preview-visible>Documents aren't built</p>
+            <div class="grid grid_inline" data-preview-section>
+              <div class="grid__row">
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 1</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 2</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 3</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 4</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 5</div>
+									</a> </div>
+                </div>
+                <div class="grid__col grid__col_16 grid__col_sm-25 grid__col_xss-50">
+                  <div class="doc-item popup__doc-item"> <a href="#">
+										
+<svg class="icon icon-file doc-item__icon"><use xlink:href="img/sprite.svg#icon-file"></use></svg>
+
+										<div class="doc-item__label">Document 6</div>
+									</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__footer" data-preview-section> <a href="#" class="btn btn_blue popup__btn">Finalize</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup js-modal" data-modal="director">
+      <div class="inner popup__inner popup__inner_sm">
+        <div class="popup__content js-modal-prevent"> <button class="popup__close js-modal-control" data-target="director">
+<svg class="icon icon-close popup__icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="title-md popup__title popup__title_indent">Add director</div>
+          <!-- begin partition -->
+          <div class="partition popup__partition">
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xs-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Name</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition popup__partition">
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xs-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Street name</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xs-100">
+                  <div class="grid__row">
+                    <div class="grid__col grid__col_50">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Street number</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                    <div class="grid__col grid__col_50">
+                      <div class="field field_indent js-field">
+                        <div class="field__label field__label_sm">Suite</div> <input type="text" class="field__input js-field-input"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">City</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Zip code</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Province</div>
+                    <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                  </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Country</div>
+                    <div class="field__select"> <select class="select js-field-select" style="width: 100%">
+					<option></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <!-- begin partition -->
+          <div class="partition popup__partition">
+            <div class="grid">
+              <div class="grid__row">
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">First director</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+                <div class="grid__col grid__col_50 grid__col_xss-100">
+                  <div class="field field_indent js-field">
+                    <div class="field__label field__label_sm">Incorporator</div> <input type="text" class="field__input js-field-input"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end partition -->
+          <div class="popup__footer"> <a href="#" class="btn btn_blue popup__btn">ADD</a> </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

@@ -1,0 +1,32 @@
+<div class="inner">
+	{{section.call({
+		classList: 'is-active',
+		title: ['Share classes'],
+		btns: [
+			{name: 'add'}
+		],
+		tableOption : {
+			cols: ['share', 'series', 'voting', 'votes', 'price'],
+			titles: ['Share class', 'Series', 'Voting', 'Votes per share', 'Shares Authorized'],
+			footer: ['There are no officers yet']
+		}
+	})}}
+	{{section.call({
+		classList: 'is-active',
+		title: ['Share classes'],
+		btns: [
+			{name: 'add'}
+		],
+		tableOption : {
+			cols: ['share', 'series', 'voting', 'votes', 'price'],
+			titles: ['Name', 'Share class', 'Certificate', 'Shares', 'Price'],
+			footer: ['There are no officers yet']
+		}
+	})}}
+
+	{% set controls = {
+		next: true,
+		prev: true
+	} %}
+	{% include 'partials/components/_btn-control.html' %}
+</div>
