@@ -1,4 +1,4 @@
-import { ACTIVE, OPEN, WIN } from '../constants';
+import { ACTIVE, OPEN, DISABLED, WIN } from '../constants';
 
 const get = props => {
   const {target, shadows, controls, contents} = props;
@@ -54,6 +54,7 @@ $('[data-tabs]').each((i, container) => {
 
       control.on('click', e => {
         e.preventDefault();
+        if (control.hasClass(DISABLED)) return;
         show(current);
       });
     });

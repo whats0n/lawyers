@@ -12,7 +12,8 @@ title: Create
 		link: 'Corporations',
 		btn: 'Edit corporation',
 		btnLink: 'create.html',
-		previewModal: 'newPreview'
+		previewModal: 'newPreview',
+		historyClassList: 'is-disabled'
 	} %}
 
 	{% set tabs = [
@@ -34,7 +35,7 @@ title: Create
 			</div>
 		{% endif %}
 	{% endfor %}
-	<div class="main" data-tabs-content="history">
+	<div class="main is-disabled" data-tabs-content="history">
 		{% include 'partials/tabs/_history.html' %}
 	</div>
 
